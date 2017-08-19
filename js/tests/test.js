@@ -2,7 +2,7 @@
     console.log('Hello SOSO!');
     
     var obj =  {
-        num: 19
+        num: 13
     };
 
     /* add function */
@@ -12,5 +12,5 @@
 
     var sum = add(obj);
 
-    console.log(sum);
+    console.log('sum:',sum);
 }();
