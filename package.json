@@ -1,0 +1,26 @@
+{
+  "name": "soso",
+  "version": "1.0.0-alpha.1",
+  "description": "This is a code library for the web.",
+  "main": "dist/js/soso",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tatwd/soso.git"
+  },
+  "keywords": [
+    "css",
+    "sass",
+    "responsive",
+    "es6",
+    "web"
+  ],
+  "author": "_king",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tatwd/soso/issues"
+  },
+  "homepage": "https://github.com/tatwd/soso#readme"
+}

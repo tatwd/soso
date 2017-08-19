@@ -1,0 +1,8 @@
+1.搭建开发环境 Build development environment
+  - gulp
+  - gulp-sass
+  - gulp-uglify
+  - gulp-clean-css
+  - gulp-concat
+  - gulp-sourcemaps
+  - browser-sync
