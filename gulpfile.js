@@ -24,12 +24,12 @@ var _JS_ = {
     SRC : './js/src/*.js',
     TEST: './js/tests/*.js',
     DIST: './js/dist'
-}
+};
 
 var _DIST_ = {
     CSS: './dist/css',
     JS : './dist/js'
-}
+};
 
 
 /**
@@ -38,6 +38,7 @@ var _DIST_ = {
  * ----
  */
 
+// serve task
 gulp.task('serve', function () {
     browserSync.init({
         server: {
@@ -48,7 +49,6 @@ gulp.task('serve', function () {
 });
 
 // sass task
-
 gulp.task('sass', function () {
     return gulp.src(_SASS_.TEST)
             .pipe(sass({
@@ -59,7 +59,6 @@ gulp.task('sass', function () {
 });
 
 // uglify task
-
 gulp.task('uglify', function () {
     gulp.src(_JS_.TEST)
         .pipe(uglify())
@@ -68,7 +67,6 @@ gulp.task('uglify', function () {
 });
 
 // watch task
-
 gulp.task('watch', function () {
     gulp.watch(_SASS_.TEST, ['sass']);
     gulp.watch(_JS_.TEST, ['uglify']);
@@ -76,5 +74,4 @@ gulp.task('watch', function () {
 });
 
 // default task
-
 gulp.task('default', ['sass', 'uglify', 'serve', 'watch']);
