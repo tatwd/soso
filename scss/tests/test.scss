@@ -1,0 +1,13 @@
+$bg_color: #eee;
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+
+    p {
+        background-color: $bg_color;
+        padding: 15px;
+        margin-top: 10px;
+    }
+}

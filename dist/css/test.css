@@ -1,0 +1,11 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+}
+
+body p {
+  background-color: #eee;
+  padding: 15px;
+  margin-top: 10px;
+}
