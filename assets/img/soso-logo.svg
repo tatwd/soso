@@ -1,18 +1,20 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+
+
 <svg width="580" height="400" xmlns="http://www.w3.org/2000/svg">
  <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
 
  <g>
   <title>background</title>
-  <rect fill="none" id="canvas_background" height="402" width="582" y="-1" x="-1"/>
-  <g display="none" id="canvasGrid">
-   <rect fill="url(#gridpattern)" stroke-width="0" y="0" x="0" height="100%" width="100%" id="svg_3"/>
+  <rect x="-1" y="-1" width="582" height="402" id="canvas_background" fill="none"/>
+  <g id="canvasGrid" display="none">
+   <rect id="svg_3" width="100%" height="100%" x="0" y="0" stroke-width="0" fill="url(#gridpattern)"/>
   </g>
  </g>
  <g>
   <title>Layer 1</title>
-  <rect rx="50" id="svg_1" height="400" width="580" y="0" x="0" stroke-width="0" stroke="#84D3DB" fill="#6D97AB"/>
-  <text stroke="#84D3DB" transform="matrix(1.1189611357276874,0,0,1.3290928276771083,34.87010471184096,-18.228284415793837) " xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="170" id="svg_4" y="223.205868" x="-17.597666" stroke-width="0" fill="#ffffff">SOSO</text>
+  <rect fill="#6D97AB" stroke="#84D3DB" stroke-width="0" x="0" y="0" width="580" height="400" id="svg_1" rx="50"/>
+  <text fill="#ffffff" stroke-width="0" x="-17.597666" y="223.180525" id="svg_4" font-size="170" font-family="Helvetica, Arial, sans-serif" text-anchor="start" xml:space="preserve" transform="matrix(1.0243331096977837,0,0,1.3290928276771081,56.428035094920595,-18.228284415793837) " stroke="#84D3DB">SOSO</text>
  </g>
 </svg>
