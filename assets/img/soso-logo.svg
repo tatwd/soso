@@ -1,0 +1,20 @@
+<svg width="580" height="400" xmlns="http://www.w3.org/2000/svg">
+ <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+ <defs>
+  <filter id="svg_1_blur">
+   <feGaussianBlur stdDeviation="0" in="SourceGraphic"/>
+  </filter>
+ </defs>
+ <g>
+  <title>background</title>
+  <rect fill="#fff" id="canvas_background" height="402" width="582" y="-1" x="-1"/>
+  <g display="none" overflow="visible" y="0" x="0" height="100%" width="100%" id="canvasGrid">
+   <rect fill="url(#gridpattern)" stroke-width="0" y="0" x="0" height="100%" width="100%"/>
+  </g>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <rect filter="url(#svg_1_blur)" rx="35" id="svg_1" height="154.671368" width="280" y="122.664313" x="149.999998" stroke-width="0" stroke="#000" fill="#8391AE"/>
+  <text stroke="#000" transform="matrix(1.2672774051549296,0,0,1.5241902069180175,-51.93716236425598,-86.54410071175086) " xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="69" id="svg_2" y="211.843419" x="170.156144" stroke-opacity="null" stroke-width="0" fill="#ffffff">SOSO</text>
+ </g>
+</svg>
