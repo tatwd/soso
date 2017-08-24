@@ -50,12 +50,12 @@ gulp.task('serve', function () {
 
 // sass task
 gulp.task('sass', function () {
-    return gulp.src(_SASS_.TEST)
-            .pipe(sass({
-                outputStyle: 'expanded'
-            }).on('Error', sass.logError))
-            .pipe(gulp.dest(_DIST_.CSS))
-            .pipe(browserSync.stream());
+    return gulp.src(_SASS_.SRC)
+        .pipe(sass({
+            outputStyle: 'expanded'
+        }).on('Error', sass.logError))
+        .pipe(gulp.dest(_DIST_.CSS))
+        .pipe(browserSync.stream());
 });
 
 // uglify task
@@ -68,7 +68,7 @@ gulp.task('uglify', function () {
 
 // watch task
 gulp.task('watch', function () {
-    gulp.watch(_SASS_.TEST, ['sass']);
+    gulp.watch(_SASS_.SRC, ['sass']);
     gulp.watch(_JS_.TEST, ['uglify']);
     gulp.watch("*.html").on('change', reload);
 });
