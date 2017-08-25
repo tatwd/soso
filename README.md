@@ -7,6 +7,7 @@
   <h3 align="center">SOSO</h3>
   
   <p align="center">
+    Web前端开发代码库。<br>
     A front-end code library for web development.
   <p>
 
