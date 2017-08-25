@@ -2,8 +2,15 @@
 
 .soso-logo {
     height: inherit;
+    display: inline-block;
 
-    & img {
-        height: inherit;
+    & a {
+        display: inherit;
+        height: 36px;
+        margin-top: 6px;
+
+        & img {
+            height: inherit;
+        }
     }
 }

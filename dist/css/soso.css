@@ -8,6 +8,16 @@ body {
 }
 
 body header {
+  background-color: #eee;
+  padding: 15px;
+}
+
+p {
+  margin: 0;
+  color: #212529;
+}
+
+.soso-nav {
   height: 48px;
   background-color: #6D97AB;
   padding: 8px 16px;
@@ -15,8 +25,20 @@ body header {
 
 .soso-logo {
   height: inherit;
+  display: inline-block;
 }
 
-.soso-logo img {
+.soso-logo a {
+  display: inherit;
+  height: 36px;
+  margin-top: 6px;
+}
+
+.soso-logo a img {
   height: inherit;
+}
+
+.soso-caro {
+  height: 50px;
+  background-color: #fff;
 }
