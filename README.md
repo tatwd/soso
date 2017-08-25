@@ -12,3 +12,11 @@
   <p>
 
 </p>
+
+## Status
+
+[![Build Status](https://travis-ci.org/tatwd/soso.svg?branch=master)](https://travis-ci.org/tatwd/soso)
+
+## Version
+
+1.0.0-alpha.1
