@@ -9,7 +9,7 @@ before_script:
   - npm install -g gulp-cli
   - npm i -g npm@5
 
-script: gulp
+script: gulp travis
 
 cache:
   directories:

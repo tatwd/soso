@@ -75,3 +75,9 @@ gulp.task('watch', function () {
 
 // default task
 gulp.task('default', ['sass', 'uglify', 'serve', 'watch']);
+
+// travis task
+gulp.task('travis', ['default'], function() {
+    console.log('Run gulp successfully!');
+    process.exit(0);
+});
