@@ -1,7 +1,7 @@
 <p align="center">
   
   <a href="#">
-    <img src="./assets/img/soso-logo.svg" alt="soso-logo" height="80px">
+    <img src="https://github.com/tatwd/soso/blob/master/assets/img/soso-logo.svg" alt="soso-logo" height="80px">
   </a>
   
   <p align="center">
