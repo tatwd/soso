@@ -3,6 +3,7 @@
   + gulp-sass
   + gulp-uglify
   - gulp-clean-css
+  + gulp-plumber
   - gulp-concat
   - gulp-sourcemaps
   + browser-sync

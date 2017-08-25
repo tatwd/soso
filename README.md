@@ -20,3 +20,7 @@
 ## Version
 
 1.0.0-alpha.1
+
+## License
+
+SOSO is licensed under the [MIT License](https://opensource.org/licenses/MIT).

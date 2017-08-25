@@ -23,6 +23,26 @@ p {
   padding: 8px 16px;
 }
 
+.soso-nav .menu-normal {
+  display: inline-block;
+  background-color: #fff;
+  width: 80%;
+}
+
+.soso-nav .menu-normal .menu-x {
+  list-style: none;
+  border: 2px solid red;
+}
+
+.soso-nav .menu-normal .menu-x li {
+  background-color: #eee;
+  float: left;
+}
+
+.soso-nav .menu-normal .menu-x li a {
+  text-decoration: none;
+}
+
 .soso-logo {
   height: inherit;
   display: inline-block;

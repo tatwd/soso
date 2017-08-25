@@ -1,1 +1,7 @@
 // grid style
+
+$avg-width: 100% / 12;
+
+[class*=".col-"] {
+    width: $avg-width * 12;
+}

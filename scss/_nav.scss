@@ -5,4 +5,26 @@
     background-color: #6D97AB;
 
     padding: 8px 16px;
+
+    // menu 菜单栏
+    .menu-normal {
+        display: inline-block;
+        background-color: #fff;
+        width: 80%;
+
+        // 水平
+        .menu-x {
+            list-style: none;
+            border: 2px solid red;
+
+            li {
+                background-color: #eee;
+                float: left;
+
+                a {
+                    text-decoration: none;
+                }
+            }
+        }
+    }
 }

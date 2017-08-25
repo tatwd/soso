@@ -9,7 +9,8 @@
 var gulp        = require('gulp'),
     sass        = require('gulp-sass'),
     uglify      = require('gulp-uglify'),
-    browserSync = require('browser-sync').create();
+    browserSync = require('browser-sync').create(),
+    plumber     = require('gulp-plumber');
 
 var reload = browserSync.reload;
 
@@ -51,9 +52,10 @@ gulp.task('serve', function () {
 // sass task
 gulp.task('sass', function () {
     return gulp.src(_SASS_.SRC)
-        .pipe(sass({
+        .pipe(plumber())
+        .pipe(sass.sync({
             outputStyle: 'expanded'
-        }).on('Error', sass.logError))
+        }))
         .pipe(gulp.dest(_DIST_.CSS))
         .pipe(browserSync.stream());
 });
@@ -61,6 +63,7 @@ gulp.task('sass', function () {
 // uglify task
 gulp.task('uglify', function () {
     gulp.src(_JS_.TEST)
+        .pipe(plumber())
         .pipe(uglify())
         .pipe(gulp.dest(_JS_.DIST))
         .pipe(browserSync.stream());
