@@ -1,8 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-
 <svg viewBox="0 0 612 612" xmlns="http://www.w3.org/2000/svg">
-<!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+ <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
 
  <g>
   <title>background</title>
@@ -13,7 +10,7 @@
  </g>
  <g>
   <title>Layer 1</title>
-  <rect stroke="#ffffff" fill="#6D97AB" stroke-width="12" x="0" y="0" width="612" height="612" id="svg_1" rx="100"/>
+  <rect stroke="#ffffff" fill="#6D97AB" stroke-width="0" x="0" y="0" width="612" height="612" id="svg_1" rx="100"/>
   <text font-weight="bold" stroke="#84D3DB" transform="matrix(2.214562097181883,0,0,1.976496794332991,-296.68964495060993,-196.5243369910342) " xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="250" id="svg_2" y="340.497235" x="188.788506" fill-opacity="null" stroke-opacity="null" stroke-width="0" fill="#ffffff">S</text>
  </g>
 </svg>

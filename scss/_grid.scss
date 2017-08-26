@@ -1,7 +1,62 @@
 // grid style
 
 $avg-width: 100% / 12;
+$box-size: border-box;
+$float-left: left;
 
-[class*=".col-"] {
-    width: $avg-width * 12;
+// For all
+[class*="soso-col-"] {
+    float: $float-left;
+}
+
+* {
+    box-sizing: $box-size;
+    -webkit-box-sizing: $box-size;
+    -moz-box-sizing: $box-size;
+}
+
+// For mobile phones
+.soso-col-s-1 { width: $avg-width *  1; }
+.soso-col-s-2 { width: $avg-width *  2; }
+.soso-col-s-3 { width: $avg-width *  3; }
+.soso-col-s-4 { width: $avg-width *  4; }
+.soso-col-s-5 { width: $avg-width *  5; }
+.soso-col-s-6 { width: $avg-width *  6; }
+.soso-col-s-7 { width: $avg-width *  7; }
+.soso-col-s-8 { width: $avg-width *  8; }
+.soso-col-s-9 { width: $avg-width *  9; }
+.soso-col-s-10{ width: $avg-width * 10; }
+.soso-col-s-11{ width: $avg-width * 11; }
+.soso-col-s-12{ width: $avg-width * 12; }  
+
+// For tablets
+@media only screen and (min-width: 600px) {
+    .soso-col-m-1 { width: $avg-width *  1; }
+    .soso-col-m-2 { width: $avg-width *  2; }
+    .soso-col-m-3 { width: $avg-width *  3; }
+    .soso-col-m-4 { width: $avg-width *  4; }
+    .soso-col-m-5 { width: $avg-width *  5; }
+    .soso-col-m-6 { width: $avg-width *  6; }
+    .soso-col-m-7 { width: $avg-width *  7; }
+    .soso-col-m-8 { width: $avg-width *  8; }
+    .soso-col-m-9 { width: $avg-width *  9; }
+    .soso-col-m-10{ width: $avg-width * 10; }
+    .soso-col-m-11{ width: $avg-width * 11; }
+    .soso-col-m-12{ width: $avg-width * 12; }    
+}
+
+// For PC
+@media only screen and (min-width: 768px) {
+    .soso-col-1 { width: $avg-width *  1; }
+    .soso-col-2 { width: $avg-width *  2; }
+    .soso-col-3 { width: $avg-width *  3; }
+    .soso-col-4 { width: $avg-width *  4; }
+    .soso-col-5 { width: $avg-width *  5; }
+    .soso-col-6 { width: $avg-width *  6; }
+    .soso-col-7 { width: $avg-width *  7; }
+    .soso-col-8 { width: $avg-width *  8; }
+    .soso-col-9 { width: $avg-width *  9; }
+    .soso-col-10{ width: $avg-width * 10; }
+    .soso-col-11{ width: $avg-width * 11; }
+    .soso-col-12{ width: $avg-width * 12; }    
 }

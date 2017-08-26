@@ -1,6 +1,6 @@
 /**
  * ----
- * ES5 Grammar
+ * ES5 Syntax
  * ----
  */
 
@@ -19,7 +19,7 @@ var reload = browserSync.reload;
 var dir = {
     _sass: {
         _main: 'scss/soso.scss',
-        _src : 'scss/**/*.scss',
+        _src : 'scss/*.scss',
         _dist: 'dist/css'
     },
     _js: {
@@ -54,7 +54,7 @@ gulp.task('serve', function () {
 gulp.task('sass', function () {
     return gulp.src(dir._sass._main)
         .pipe(plumber())
-        .pipe(sass.sync({
+        .pipe(sass({
             outputStyle: 'expanded'
         }))
         .pipe(gulp.dest(dir._sass._dist))
@@ -66,7 +66,7 @@ gulp.task('uglify', function () {
     gulp.src(dir._js._test)
         .pipe(plumber())
         .pipe(uglify())
-        .pipe(gulp.dest(dir._js._swap))
+        .pipe(gulp.dest(dir._js._dist))
         .pipe(browserSync.stream());
 });
 

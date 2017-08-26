@@ -1,30 +1,78 @@
 // nav class
 
 .soso-nav {
-    height: 48px;
+    height: auto;
     background-color: #6D97AB;
-
     padding: 8px 16px;
 
-    // menu 菜单栏
-    .menu-normal {
-        display: inline-block;
-        background-color: #fff;
-        width: 80%;
+    &:after {
+        content: '';
+        clear: both;
+        display: block;
+    }
 
-        // 水平
-        .menu-x {
-            list-style: none;
-            border: 2px solid red;
+    // logo class
 
-            li {
-                background-color: #eee;
-                float: left;
+    .soso-logo {
+        height: inherit;
+        background-color: #444;
+        font-size: 0; // clear default margin-bottom of img
 
-                a {
-                    text-decoration: none;
+        a {
+            height: inherit;
+            border: 2px solid #fff;
+            border-radius: 8px;
+            float: right;
+            // display: inline-block;
+
+            img {
+                height: 36px;
+                max-width: 100%;
+                margin-left: 0; 
+            }
+
+            // when screen is mobile        
+            @media only screen and (max-width: 768px) {
+                & {
+                    float: left;
                 }
             }
         }
+    }
+
+    // mobile menu icon
+
+    .menu-mobile {
+        height: inherit;
+        background-color: #123;
+        font-size: 0;
+        display: none;       
+
+        a {
+            height: inherit;
+            border: 2px solid #fff;
+            border-radius: 8px;
+            float: right;
+            // display: inline-block;
+
+            img {
+                height: 36px;
+                max-width: 100%;
+            }
+        }
+
+        // when screen is mobile
+        @media only screen and (max-width: 768px) {
+            & {
+                display: block;
+            }
+        }
+    }
+
+    // menu-normal
+
+    .menu-normal {
+        background-color: #234;
+        height: 40px;
     }
 }
