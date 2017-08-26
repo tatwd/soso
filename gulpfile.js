@@ -16,21 +16,22 @@ var reload = browserSync.reload;
 
 // directories objects
 
-var _SASS_ = {
-    SRC : './scss/*.scss',
-    TEST: './scss/tests/*.scss',
-};
-
-var _JS_ = {
-    SRC : './js/src/*.js',
-    TEST: './js/tests/*.js',
-    DIST: './js/dist'
-};
-
-var _DIST_ = {
-    CSS: './dist/css',
-    JS : './dist/js'
-};
+var dir = {
+    _sass: {
+        _main: 'scss/soso.scss',
+        _src : 'scss/**/*.scss',
+        _dist: 'dist/css'
+    },
+    _js: {
+        _src : 'js/src/*.js',
+        _swap: 'js/dist',
+        _test: 'js/tests/*.js',
+        _dist: 'dist/js',
+    },
+    _html: {
+        _src: './**/*.html'
+    }
+}
 
 
 /**
@@ -51,29 +52,29 @@ gulp.task('serve', function () {
 
 // sass task
 gulp.task('sass', function () {
-    return gulp.src(_SASS_.SRC)
+    return gulp.src(dir._sass._main)
         .pipe(plumber())
         .pipe(sass.sync({
             outputStyle: 'expanded'
         }))
-        .pipe(gulp.dest(_DIST_.CSS))
+        .pipe(gulp.dest(dir._sass._dist))
         .pipe(browserSync.stream());
 });
 
 // uglify task
 gulp.task('uglify', function () {
-    gulp.src(_JS_.TEST)
+    gulp.src(dir._js._test)
         .pipe(plumber())
         .pipe(uglify())
-        .pipe(gulp.dest(_JS_.DIST))
+        .pipe(gulp.dest(dir._js._swap))
         .pipe(browserSync.stream());
 });
 
 // watch task
 gulp.task('watch', function () {
-    gulp.watch(_SASS_.SRC, ['sass']);
-    gulp.watch(_JS_.TEST, ['uglify']);
-    gulp.watch("*.html").on('change', reload);
+    gulp.watch(dir._sass._src, ['sass']);
+    gulp.watch(dir._js._test, ['uglify']);
+    gulp.watch(dir._html._src).on('change', reload);
 });
 
 // default task

@@ -4,12 +4,12 @@
     height: inherit;
     display: inline-block;
 
-    & a {
+    a {
         display: inherit;
         height: 36px;
         margin-top: 6px;
 
-        & img {
+        img {
             height: inherit;
         }
     }
