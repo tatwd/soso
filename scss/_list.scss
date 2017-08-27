@@ -1,0 +1,72 @@
+// list module
+
+$main-color: #6D97AB;
+
+div.list-container {
+    width: (100% / 12) * 8;
+    margin: 0 auto;
+
+    height: auto;
+    // padding: 5px;
+    background-color: #fff;
+
+    @media only screen and (max-width:768px){
+        & {
+            width: 100%;
+        }
+    }
+}
+
+ul.article-list {
+    background-color: #234;
+
+    [class*="article-"] {
+        // background-color: #556677;
+        margin-bottom: 15px;
+        // padding: 5px;
+
+        .content {
+            background-color: #d7e3e8;
+            padding: 15px; 
+
+            .title {
+                font-size: 25px;
+                // background-color: #fff;               
+            }
+            
+            .auther {
+                // background-color: #fff;
+                height: 40px;
+                margin-top: 5px;
+                margin-bottom: 5px;
+
+                line-height: 40px;
+                font-size: 14px;                
+            }
+
+            .preview {
+                // background-color: #fff;
+                height: 120px;
+                margin-bottom: 5px;
+
+                font-size: 14px;             
+            }
+
+            .read-more {
+                background-color: $main-color;
+                color: #fff;
+                font-size: 14px;
+                // display: inline-block;
+                padding: 6px;
+                border-radius: 3px;
+                float: right;
+            }
+
+            &:after {
+                content: '';
+                clear: both;
+                display: block;
+            }
+        }
+    }
+}

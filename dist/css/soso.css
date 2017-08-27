@@ -5,16 +5,46 @@
 body {
   margin: 0;
   padding: 0;
+  font-family: sans-serif;
 }
 
-body header {
+header {
   background-color: #eee;
   padding: 15px;
+}
+
+header:after {
+  content: '';
+  clear: both;
+  display: block;
+}
+
+main, footer {
+  background-color: #eee;
+  padding: 15px;
+  margin-top: 5px;
+}
+
+footer {
+  background-color: #6d97ab;
 }
 
 p {
   margin: 0;
   color: #212529;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
 }
 
 [class*="soso-col-"] {
@@ -165,62 +195,204 @@ p {
   display: block;
 }
 
-.soso-nav .soso-logo {
+.soso-nav .soso-logo, .soso-nav .menu-mobile, .soso-nav .soso-user {
   height: inherit;
-  background-color: #444;
+  background-color: #6D97AB;
   font-size: 0;
 }
 
-.soso-nav .soso-logo a {
+.soso-nav .soso-logo a, .soso-nav .menu-mobile a, .soso-nav .soso-user a {
   height: inherit;
   border: 2px solid #fff;
   border-radius: 8px;
   float: right;
 }
 
-.soso-nav .soso-logo a img {
+.soso-nav .soso-logo a img, .soso-nav .menu-mobile a img, .soso-nav .soso-user a img {
   height: 36px;
   max-width: 100%;
-  margin-left: 0;
 }
 
-@media only screen and (max-width: 768px) {
-  .soso-nav .soso-logo a {
+@media only screen and (max-width: 600px) {
+  .soso-nav .soso-logo a, .soso-nav .menu-mobile a, .soso-nav .soso-user a {
     float: left;
   }
 }
 
 .soso-nav .menu-mobile {
-  height: inherit;
-  background-color: #123;
-  font-size: 0;
+  background-color: #6D97AB;
   display: none;
 }
 
 .soso-nav .menu-mobile a {
-  height: inherit;
-  border: 2px solid #fff;
-  border-radius: 8px;
   float: right;
 }
 
-.soso-nav .menu-mobile a img {
-  height: 36px;
-  max-width: 100%;
-}
-
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 600px) {
   .soso-nav .menu-mobile {
     display: block;
   }
 }
 
 .soso-nav .menu-normal {
-  background-color: #234;
+  background-color: #6D97AB;
+  height: auto;
+}
+
+.soso-nav .menu-normal .menu-x {
+  margin-left: 40px;
+}
+
+.soso-nav .menu-normal .menu-x:after {
+  content: '';
+  clear: both;
+  display: block;
+}
+
+.soso-nav .menu-normal .menu-x li.item {
   height: 40px;
+  line-height: 40px;
+  text-align: center;
+}
+
+.soso-nav .menu-normal .menu-x li.item a {
+  color: #E3E1E1;
+  font-size: 14px;
+}
+
+.soso-nav .menu-normal .menu-x li.item a:hover {
+  color: #fff;
+}
+
+.soso-nav .menu-normal .menu-x li.item a.active {
+  color: #fff;
+}
+
+@media only screen and (max-width: 600px) {
+  .soso-nav .menu-normal .menu-x {
+    margin-left: 0;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .soso-nav .menu-normal {
+    display: none;
+    margin-top: 8px;
+    border-top: 1px solid #62889A;
+  }
+}
+
+.soso-nav .soso-user a {
+  float: left;
+}
+
+@media only screen and (max-width: 600px) {
+  .soso-nav .soso-user {
+    display: none;
+  }
 }
 
 .soso-caro {
-  height: 50px;
+  height: auto;
+  width: 66.66667%;
+  background-color: #fff;
+  margin: 0 auto;
+  margin-top: 5px;
+  position: relative;
+}
+
+.soso-caro:before {
+  content: '';
+  display: block;
+  padding-top: 71%;
+}
+
+@media only screen and (max-width: 768px) {
+  .soso-caro {
+    width: 100%;
+  }
+}
+
+.soso-caro div.item {
+  font-size: 0;
+  border: 1px solid lightslategray;
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+.soso-caro div.item a img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: top;
+}
+
+.soso-caro div.active {
+  opacity: 1;
+}
+
+div.list-container {
+  width: 66.66667%;
+  margin: 0 auto;
+  height: auto;
   background-color: #fff;
 }
+
+@media only screen and (max-width: 768px) {
+  div.list-container {
+    width: 100%;
+  }
+}
+
+ul.article-list {
+  background-color: #234;
+}
+
+ul.article-list [class*="article-"] {
+  margin-bottom: 15px;
+}
+
+ul.article-list [class*="article-"] .content {
+  background-color: #d7e3e8;
+  padding: 15px;
+}
+
+ul.article-list [class*="article-"] .content .title {
+  font-size: 25px;
+}
+
+ul.article-list [class*="article-"] .content .auther {
+  height: 40px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  line-height: 40px;
+  font-size: 14px;
+}
+
+ul.article-list [class*="article-"] .content .preview {
+  height: 120px;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+ul.article-list [class*="article-"] .content .read-more {
+  background-color: #6D97AB;
+  color: #fff;
+  font-size: 14px;
+  padding: 6px;
+  border-radius: 3px;
+  float: right;
+}
+
+ul.article-list [class*="article-"] .content:after {
+  content: '';
+  clear: both;
+  display: block;
+}
+
+/*# sourceMappingURL=soso.css.map */

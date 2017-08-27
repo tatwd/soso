@@ -8,13 +8,14 @@
     <title>soso demo</title>
     
     <link rel="stylesheet" href="dist/css/soso.css">
-    <script src="dist/js/test.js"></script>
+    <script src="dist/js/menu.js"></script>
 
 </head>
 <body>
+    <!-- header -->
     <header class="soso-header">
-        <div class="soso-nav">
-            <div class="soso-logo soso-col-2 soso-col-s-6">
+        <div class="soso-nav ">
+            <div class="soso-logo soso-col-2 soso-col-m-2 soso-col-s-6">
                 <a href="#">
                     <img src="assets/img/soso-logo.svg" alt="soso-logo">
                 </a>
@@ -24,19 +25,77 @@
                     <img src="assets/img/soso-menu-mobile.svg" alt="soso-logo">
                 </a>
             </div>
-            <div class="menu-normal soso-col-8">
-                <!-- <ul class="menu-x">
-                    <li><a href="#">首页</a></li>
-                    <li><a href="#">标签</a></li>
-                    <li><a href="#">热门</a></li>
-                </ul> -->
+            <div class="menu-normal soso-col-8 soso-col-m-8 soso-col-s-12">
+                <ul class="menu-x">
+                    <li class="item soso-col-1 soso-col-m-2 soso-col-s-12"><a class="active" href="#">首页</a></li>
+                    <li class="item soso-col-1 soso-col-m-2 soso-col-s-12"><a href="#">标签</a></li>
+                    <li class="item soso-col-1 soso-col-m-2 soso-col-s-12"><a href="#">热门</a></li>
+                    <li class="item soso-col-1 soso-col-m-2 soso-col-s-12"><a href="#">分享</a></li>                    
+                </ul>
             </div>
-            <!-- <div class="soso-user soso-col-2"></div> -->
+            <div class="soso-user soso-col-2 soso-col-m-2">
+                <a href="#">
+                    <img src="assets/img/soso-user.svg" alt="soso-user">
+                </a>
+            </div>
         </div>
         <div class="soso-caro">
-            <p>caro place</p>
+            <div class="item active">
+                <a href="">
+                    <img src="assets/caro-img/item-1.svg" alt="caro-img-1">
+                </a>
+            </div>
+            <div class="item">
+                <a href="">
+                    <img src="assets/caro-img/item-2.svg" alt="caro-img-2">
+                </a>
+            </div>
+            <div class="item">
+                <a href="">
+                    <img src="assets/caro-img/item-3.svg" alt="caro-img-3">
+                </a>
+            </div>
         </div>
     </header>
+
+    <!-- main -->
+    <main class="soso-main">
+        <div class="list-container">
+            <!-- article list begin -->
+            <ul class="article-list">
+                <li class="article-1">
+                    <div class="content">
+                        <a href="#" class="title">title</a>
+                        <div class="auther">auther</div>
+                        <p class="preview">SOSO</p>
+                        <a href="" class="read-more">阅读更多</a>
+                    </div>
+                </li>
+                <li class="article-2">
+                    <div class="content">
+                        <a href="#" class="title">title</a>
+                        <div class="auther">auther</div>
+                        <p class="preview">SOSO</p>
+                        <a href="" class="read-more">阅读更多</a>                        
+                    </div>
+                </li>                 
+                <li class="article-3">
+                    <div class="content">
+                        <a href="#" class="title">title</a>
+                        <div class="auther">auther</div>
+                        <p class="preview">SOSO</p>
+                        <a href="" class="read-more">阅读更多</a>                        
+                    </div>
+                </li>                
+            </ul>
+            <!-- article list end -->             
+        </div>
+    </main>
+
+    <!-- footer -->
+    <footer class="soso-footer">
+        <p>soso-footer</p>
+    </footer>
     
 </body>
 </html>

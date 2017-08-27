@@ -4,13 +4,45 @@ body {
     margin: 0;
     padding: 0;
 
-    header {
-        background-color: #eee;
-        padding: 15px;
+    font-family: sans-serif;
+}
+
+header {
+    background-color: #eee;
+    padding: 15px;
+
+    &:after {
+        content: '';
+        clear: both;
+        display: block;
     }
+}
+
+main {
+    background-color: #eee;
+    padding: 15px;
+    margin-top: 5px;
+}
+
+footer {
+    @extend main;
+    background-color: #6d97ab;
 }
 
 p {
     margin: 0;
     color: #212529;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
 }

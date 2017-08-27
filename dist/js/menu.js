@@ -1,0 +1,1 @@
+function $(n){return document.getElementById(n)||document.getElementsByClassName(n)}window.onload=function(){var n=$("menu-mobile"),e=$("menu-normal"),o=!1;n[0].onclick=function(n){(n=n||window.event).cancelBubble=!0,e[0].style.display=o?"none":"block",o=!o},window.onresize=function(){this.innerWidth>600?e[0].style.display="block":o||(e[0].style.display="none")}};

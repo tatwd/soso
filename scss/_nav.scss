@@ -1,10 +1,25 @@
 // nav class
 
+$nav-bg-color: #6D97AB;
+$nav-padding: 8px 16px;
+
+$logo-bg-color: $nav-bg-color;
+$a-border-size: 2px;
+
+$menu-bg-color: $nav-bg-color;
+$menu-margin-left: 40px;
+
+$li-height: 40px;
+
+$menu-font-size: 14px;
+$menu-font-color: #E3E1E1;
+
 .soso-nav {
     height: auto;
-    background-color: #6D97AB;
+    background-color: $nav-bg-color;
     padding: 8px 16px;
 
+    // clear float
     &:after {
         content: '';
         clear: both;
@@ -15,24 +30,23 @@
 
     .soso-logo {
         height: inherit;
-        background-color: #444;
+        background-color: $logo-bg-color;
         font-size: 0; // clear default margin-bottom of img
 
         a {
             height: inherit;
-            border: 2px solid #fff;
+            border: $a-border-size solid #fff;
             border-radius: 8px;
             float: right;
             // display: inline-block;
 
             img {
                 height: 36px;
-                max-width: 100%;
-                margin-left: 0; 
+                max-width: 100%; 
             }
 
             // when screen is mobile        
-            @media only screen and (max-width: 768px) {
+            @media only screen and (max-width: 600px) {
                 & {
                     float: left;
                 }
@@ -43,26 +57,17 @@
     // mobile menu icon
 
     .menu-mobile {
-        height: inherit;
-        background-color: #123;
-        font-size: 0;
+        @extend .soso-logo;
+        background-color: $menu-bg-color;
         display: none;       
 
         a {
-            height: inherit;
-            border: 2px solid #fff;
-            border-radius: 8px;
             float: right;
             // display: inline-block;
-
-            img {
-                height: 36px;
-                max-width: 100%;
-            }
         }
 
         // when screen is mobile
-        @media only screen and (max-width: 768px) {
+        @media only screen and (max-width: 600px) {
             & {
                 display: block;
             }
@@ -72,7 +77,69 @@
     // menu-normal
 
     .menu-normal {
-        background-color: #234;
-        height: 40px;
+        background-color: $menu-bg-color;
+        height: auto;
+
+        .menu-x {
+            margin-left: $menu-margin-left;
+
+            &:after {
+                content: '';
+                clear: both;
+                display: block;
+            }
+
+            li.item {
+                height: $li-height;
+                line-height: $li-height;
+                text-align: center;
+                
+                a {
+                    color: $menu-font-color;
+                    font-size: $menu-font-size;
+
+                    &:hover {
+                        color: #fff;
+                    }
+
+                    &.active {
+                        color: #fff;
+                    }
+                }
+            }
+
+            @media only screen and (max-width: 600px) {
+                & {
+                    margin-left: 0;
+                }
+            }
+
+        }
+
+        // when screen is mobile        
+        @media only screen and (max-width: 600px) {
+            & {
+                display: none;
+                margin-top:8px;
+                border-top: 1px solid #62889A;
+            }
+        }
+
+    }
+
+    // soso-user
+
+    .soso-user {
+        @extend .soso-logo;
+        
+        a {
+            float: left;
+        }
+
+        @media only screen and (max-width: 600px) {
+            & {
+                display: none;
+            }
+        }
     }
 }

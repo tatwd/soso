@@ -1,6 +1,57 @@
 // caro class
 
+$caro-width: (100% / 12) * 8;
+
 .soso-caro {
-    height: 50px;
+    height: auto;
+    width: $caro-width;
     background-color: #fff;
+    margin: 0 auto;
+    margin-top: 5px; 
+    
+    position: relative;
+    &:before {
+        content: '';
+        display: block;
+        padding-top: 71%; 
+
+    }
+
+    @media only screen and (max-width:768px) {
+        & {
+            width: 100%;
+        }
+    }
+
+
+    div.item {
+        font-size: 0;
+        border: 1px solid lightslategray;
+        
+        width: 100%;
+        height: auto;
+        
+        position: absolute;
+        top: 0;
+        left: 0;
+        
+        opacity: 0;
+        transition: opacity 0.3s;
+
+        // padding: 5px;
+
+        a {
+            img {
+                max-width: 100%;
+                height: auto;
+                vertical-align: top;
+            }
+        }
+    }
+
+    div.active {
+        opacity: 1;
+    }
+
+
 }

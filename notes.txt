@@ -1,11 +1,21 @@
 1.搭建开发环境 Build development environment
+
   + gulp
   + gulp-sass
   + gulp-uglify
   - gulp-clean-css
   + gulp-plumber
+  + gulp-autoprefixer
   - gulp-concat
-  - gulp-sourcemaps
+  + gulp-sourcemaps
   + browser-sync
   - babel-cli
   - webpack
+
+2.问题 Issues
+
+  - gulp-sass compile error:
+    Q: Error: File to import not found or unreadable
+    A: "atomic_save": true in sublime text 3, vscode?
+
+  - soso-caro is not support ie.

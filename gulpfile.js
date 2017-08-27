@@ -6,11 +6,14 @@
 
 'use strict';
 
-var gulp        = require('gulp'),
-    sass        = require('gulp-sass'),
-    uglify      = require('gulp-uglify'),
-    browserSync = require('browser-sync').create(),
-    plumber     = require('gulp-plumber');
+var gulp         = require('gulp'),
+    sass         = require('gulp-sass'),
+    uglify       = require('gulp-uglify'),
+    browserSync  = require('browser-sync').create(),
+    plumber      = require('gulp-plumber'),
+    wait         = require('gulp-wait'),
+    autoprefixer = require('gulp-autoprefixer'),
+    sourcemaps   = require('gulp-sourcemaps');
 
 var reload = browserSync.reload;
 
@@ -41,7 +44,7 @@ var dir = {
  */
 
 // serve task
-gulp.task('serve', function () {
+gulp.task('serve', ['sass', 'uglify'], function () {
     browserSync.init({
         server: {
             baseDir: './',
@@ -53,10 +56,17 @@ gulp.task('serve', function () {
 // sass task
 gulp.task('sass', function () {
     return gulp.src(dir._sass._main)
+        .pipe(wait(200)) // 200ms delay
         .pipe(plumber())
+        .pipe(sourcemaps.init())
         .pipe(sass({
             outputStyle: 'expanded'
         }))
+        .pipe(autoprefixer({
+            browsers: ['last 2 versions'],
+            cascade: false
+        }))
+        .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest(dir._sass._dist))
         .pipe(browserSync.stream());
 });
@@ -78,9 +88,9 @@ gulp.task('watch', function () {
 });
 
 // default task
-gulp.task('default', ['sass', 'uglify', 'serve', 'watch']);
+gulp.task('default', ['serve', 'watch']);
 
-// travis task
+// travis task for travis-ci test
 gulp.task('travis', ['default'], function() {
     console.log('Run gulp successfully!');
     process.exit(0);
