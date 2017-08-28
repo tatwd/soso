@@ -8,7 +8,7 @@
     <title>soso demo</title>
     
     <link rel="stylesheet" href="dist/css/soso.css">
-    <script src="dist/js/menu.js"></script>
+    <script src="dist/js/base.js"></script>
 
 </head>
 <body>
@@ -40,12 +40,12 @@
             </div>
         </div>
         <div class="soso-caro">
-            <div class="item ">
+            <div class="item active">
                 <a href="">
                     <img src="assets/caro-img/item-1.svg" alt="caro-img-1">
                 </a>
             </div>
-            <div class="item active">
+            <div class="item">
                 <a href="">
                     <img src="assets/caro-img/item-2.svg" alt="caro-img-2">
                 </a>
@@ -55,16 +55,22 @@
                     <img src="assets/caro-img/item-3.svg" alt="caro-img-3">
                 </a>
             </div>
-            <div class="caro-ctrl">
-                <div class="ctrl-left"></div>
-                <div class="ctrl-right"></div>
-            </div>
+            
+            <a class="caro-ctrl ctrl-left" href="javascript:void(0);">
+                <i class="icon-ctrl-left"></i>
+            </a>
+            <a class="caro-ctrl ctrl-right" href="javascript:void(0);">
+                <i class="icon-ctrl-right"></i>
+            </a>
+            
         </div>
     </header>
 
     <!-- main -->
     <!-- ie not support <main> -->
     <div class="soso-main">
+
+        <!-- list-container -->
         <div class="list-container">
             <!-- article list begin -->
             <ul class="article-list">
@@ -81,7 +87,7 @@
                         <a href="#" class="title">title</a>
                         <div class="auther">auther</div>
                         <p class="preview">SOSO</p>
-                        <a href="" class="read-more">阅读更多</a>                        
+                        <a href="" class="read-more">阅读更多</a>
                     </div>
                 </li>                 
                 <li class="article-3">
@@ -89,17 +95,37 @@
                         <a href="#" class="title">title</a>
                         <div class="auther">auther</div>
                         <p class="preview">SOSO</p>
-                        <a href="" class="read-more">阅读更多</a>                        
+                        <a href="" class="read-more">阅读更多</a>
                     </div>
                 </li>                
             </ul>
             <!-- article list end -->             
         </div>
+
+        <!-- join us -->
+        <!-- <div class="join-us">
+            <p>join us!</p>
+        </div> -->
+
+        <!-- back to top -->
+        <a href="javascript:void(0);" class="soso-backtop">
+            <i class="icon-backtop"></i>
+        </a>
     </div>
 
     <!-- footer -->
     <footer class="soso-footer">
-        <p>soso-footer</p>
+        <div class="footer-container soso-col-12 soso-col-m-12 soso-col-s-12">
+            <div class="copyright">SOSO &copy; 2017 by 
+                <a href="#" class="soso-author">_king</a>
+            </div>
+            <div class="links">
+                <a href="https://github.com/tatwd/soso" class="to-github">
+                    <svg aria-hidden="true" version="1.1" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path></svg>
+                </a>
+                <!-- <a href="" class="to-weibo"></a> -->
+            </div>
+        </div>
     </footer>
     
 </body>

@@ -1,0 +1,31 @@
+// button module
+.soso-button {
+    display: inline-block;
+    padding: 15px;
+}
+
+a.soso-backtop {
+    @extend .soso-button;
+
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+
+    border-radius: 5px;
+    background-color: #6d97ab;
+
+    display: none;
+}
+
+i.icon-backtop {
+    width: 12px;
+    height: 12px;
+    // background-color: #eee;
+    display: inherit;
+
+    border-top: 3px solid #fff;
+    border-left: 3px solid #fff;
+    transform: rotate(45deg);
+    margin-top: 2px;
+    margin-bottom: -2px;
+}

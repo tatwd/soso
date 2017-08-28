@@ -1,5 +1,11 @@
 // basic style
 
+$main-padding: 15px 5px;
+$main-bg-color: #6D97AB;
+$footer-bg-color: #d5e2ef;
+
+$tmp-bg-color: #eee;
+
 body {
     margin: 0;
     padding: 0;
@@ -8,8 +14,8 @@ body {
 }
 
 header {
-    background-color: #eee;
-    padding: 15px;
+    background-color: $tmp-bg-color;
+    padding: $main-padding;
 
     &:after {
         content: '';
@@ -19,19 +25,19 @@ header {
 }
 
 .soso-main {
-    background-color: #eee;
-    padding: 15px;
+    background-color: $tmp-bg-color;
+    padding: $main-padding;
     margin-top: 5px;
 }
 
 footer {
     @extend .soso-main;
-    background-color: #6d97ab;
+    background-color: $footer-bg-color;
 }
 
 p {
     margin: 0;
-    color: #212529;
+    // color: #212529;
 }
 
 a {

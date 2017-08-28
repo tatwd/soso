@@ -1,19 +1,23 @@
 // caro class
 
 $caro-width: (100% / 12) * 8;
+$caro-padding-top: 69%;
+
+$tmp-color: #eee;
 
 .soso-caro {
     height: auto;
     width: $caro-width;
-    background-color: #333;
+    background-color: $tmp-color;
     margin: 0 auto;
+    
     margin-top: 5px; 
     
     position: relative;
     &:before {
         content: '';
         display: block;
-        padding-top: 69%; 
+        padding-top: $caro-padding-top; 
 
     }
 
@@ -42,9 +46,9 @@ $caro-width: (100% / 12) * 8;
 
         a {
             display: block;
-            // border: 1px solid red;
             height: 100%;
 
+            // border: 1px solid red;
             // padding: 5px;
 
             img {
@@ -53,7 +57,7 @@ $caro-width: (100% / 12) * 8;
                 height: 100%;
                 // vertical-align: top;
                 border-radius: 0 0 15px 15px;
-                border: 1px solid #6d97ab;
+                // border: 1px solid #6d97ab;
                 padding: 0;
                 margin: 0 auto;
                 display: inherit;
@@ -65,5 +69,48 @@ $caro-width: (100% / 12) * 8;
         opacity: 1;
     }
 
+    .caro-ctrl {
+        $icon-border-size: 3px;
+        $icon-border-color: #fff;
 
+        display: none;
+        position: absolute;
+        top: 42%;
+
+        padding: 12px;
+        background-color: rgba(0, 0, 0, 0.5);
+
+        [class*="icon-ctrl-"] {
+            width: 12px;
+            height: 12px;
+            display: inherit;
+            border-top: $icon-border-size solid $icon-border-color;
+        }
+
+        .icon-ctrl-left {
+            border-left: $icon-border-size solid $icon-border-color;
+            transform: rotate(-45deg);
+            // margin-left: 2px;
+        }
+
+        .icon-ctrl-right {
+            border-right: $icon-border-size solid $icon-border-color;
+            transform: rotate(45deg);
+            // margin-right: 2px;
+        }
+    }
+
+    $border-r: 5px;
+
+    .ctrl-left {
+        left: 0;
+        border-top-right-radius: $border-r;
+        border-bottom-right-radius: $border-r;
+    }
+
+    .ctrl-right {
+        right: 0;
+        border-top-left-radius: $border-r;
+        border-bottom-left-radius: $border-r;
+    }
 }

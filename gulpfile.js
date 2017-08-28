@@ -56,7 +56,7 @@ gulp.task('serve', ['sass', 'uglify'], function () {
 // sass task
 gulp.task('sass', function () {
     return gulp.src(dir._sass._main)
-        .pipe(wait(200)) // 200ms delay
+        // .pipe(wait(200)) // 200ms delay
         .pipe(plumber())
         .pipe(sourcemaps.init())
         .pipe(sass({
