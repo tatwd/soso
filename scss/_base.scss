@@ -18,14 +18,14 @@ header {
     }
 }
 
-main {
+.soso-main {
     background-color: #eee;
     padding: 15px;
     margin-top: 5px;
 }
 
 footer {
-    @extend main;
+    @extend .soso-main;
     background-color: #6d97ab;
 }
 

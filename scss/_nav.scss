@@ -5,6 +5,8 @@ $nav-padding: 8px 16px;
 
 $logo-bg-color: $nav-bg-color;
 $a-border-size: 2px;
+$logo-img-width: 36px;
+$a-width: $a-border-size * 2 + $logo-img-width;
 
 $menu-bg-color: $nav-bg-color;
 $menu-margin-left: 40px;
@@ -34,15 +36,15 @@ $menu-font-color: #E3E1E1;
         font-size: 0; // clear default margin-bottom of img
 
         a {
-            height: inherit;
+            width: $a-width;
             border: $a-border-size solid #fff;
             border-radius: 8px;
             float: right;
-            // display: inline-block;
 
             img {
                 height: 36px;
-                max-width: 100%; 
+                max-width: 100%;
+                border-radius: inherit;
             }
 
             // when screen is mobile        

@@ -19,7 +19,7 @@ header:after {
   display: block;
 }
 
-main, footer {
+.soso-main, footer {
   background-color: #eee;
   padding: 15px;
   margin-top: 5px;
@@ -202,7 +202,7 @@ li {
 }
 
 .soso-nav .soso-logo a, .soso-nav .menu-mobile a, .soso-nav .soso-user a {
-  height: inherit;
+  width: 40px;
   border: 2px solid #fff;
   border-radius: 8px;
   float: right;
@@ -211,6 +211,7 @@ li {
 .soso-nav .soso-logo a img, .soso-nav .menu-mobile a img, .soso-nav .soso-user a img {
   height: 36px;
   max-width: 100%;
+  border-radius: inherit;
 }
 
 @media only screen and (max-width: 600px) {
@@ -295,7 +296,7 @@ li {
 .soso-caro {
   height: auto;
   width: 66.66667%;
-  background-color: #fff;
+  background-color: #333;
   margin: 0 auto;
   margin-top: 5px;
   position: relative;
@@ -304,7 +305,7 @@ li {
 .soso-caro:before {
   content: '';
   display: block;
-  padding-top: 71%;
+  padding-top: 69%;
 }
 
 @media only screen and (max-width: 768px) {
@@ -315,9 +316,8 @@ li {
 
 .soso-caro div.item {
   font-size: 0;
-  border: 1px solid lightslategray;
   width: 100%;
-  height: auto;
+  height: 100%;
   position: absolute;
   top: 0;
   left: 0;
@@ -326,10 +326,19 @@ li {
   transition: opacity 0.3s;
 }
 
+.soso-caro div.item a {
+  display: block;
+  height: 100%;
+}
+
 .soso-caro div.item a img {
   max-width: 100%;
-  height: auto;
-  vertical-align: top;
+  height: 100%;
+  border-radius: 0 0 15px 15px;
+  border: 1px solid #6d97ab;
+  padding: 0;
+  margin: 0 auto;
+  display: inherit;
 }
 
 .soso-caro div.active {
