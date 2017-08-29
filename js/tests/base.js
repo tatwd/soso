@@ -6,12 +6,12 @@ window.onload = function() {
 
     // menu click event end
     // -----------------------
-    // caro-ctrl event begin
-     
-    caroCtrlPlay();
+    // caro-play begin
+    
+    caroPlay();
 
-    // caro-ctrl event end
-    // -----------------------
+    // caro-play end
+    // --------------------------
     // back top begin
     
     backTopPlay();
@@ -27,8 +27,7 @@ function menuMobilePlay() {
     var isClicked  = false;
 
     menuMobile[0].onclick = function(ev) {
-        ev = ev || window.event;
-        ev.cancelBubble = true;
+        stopBubble(ev);
   
         if(!isClicked) {
             menuNormal[0].style.display = 'block';
@@ -47,22 +46,84 @@ function menuMobilePlay() {
     }
 }
 
-// caroCtrlPlay
+// caroPlay
 
-function caroCtrlPlay() {
-    var caro = $('soso-caro');
-    var caroCtrl = $('caro-ctrl');
+function caroPlay() {
+    var caro = $('soso-caro')
+    var caroItem  = caro[0].getElementsByClassName('item'); 
+    var caroCtrls = $('caro-ctrl');
+    var caroIndex = $('caro-index')[0].getElementsByClassName('index'); 
+    var curent = 0;
 
-    caro[0].onmouseover = function () {
-        for (var i = caroCtrl.length - 1; i >= 0; i--) {
-            caroCtrl[i].style.display = 'block';
+    // 淡入 
+    function fadeIn() {
+        caroItem[curent].classList.add('active');
+        caroIndex[curent].classList.add('active');
+    }
+    // 淡出
+    function fadeOut() {
+        caroItem[curent].classList.remove('active');
+        caroIndex[curent].classList.remove('active');
+    }
+
+    // 前进
+    function go() {
+        fadeOut();
+
+        curent++;
+        if(curent >= caroItem.length) {
+            curent = 0;
+        }
+
+        fadeIn();
+    }
+
+    // 返回
+    function bk() {
+        fadeOut();
+
+        if(curent == 0) {
+            curent = caroItem.length;
+        }
+        curent--;
+
+        fadeIn();
+    }
+
+    var inter = setInterval(go, 4000);
+
+    // 鼠标移入
+    caro[0].onmouseover = function(ev) {
+        stopBubble(ev)
+
+        clearInterval(inter);
+
+        for (var i = caroCtrls.length - 1; i >= 0; i--) {
+            caroCtrls[i].style.display = 'block';
+        }
+    };
+    
+    // 鼠标移出
+    caro[0].onmouseout = function(ev) {
+        stopBubble(ev);
+
+        inter = setInterval(go, 2000);
+
+        for (var i = caroCtrls.length - 1; i >= 0; i--) {
+            caroCtrls[i].style.display = 'none';
         }
     };
 
-    caro[0].onmouseout = function () {
-        for (var i = caroCtrl.length - 1; i >= 0; i--) {
-            caroCtrl[i].style.display = 'none';
-        }
+    caroCtrls[0].onclick = function(ev) {
+        stopBubble(ev);
+
+        bk();
+    };
+
+    caroCtrls[1].onclick = function(ev) {
+        stopBubble(ev);
+
+        go();
     };
 }
 
@@ -74,7 +135,9 @@ function backTopPlay() {
 
     // 监听滑条移动
     window.onscroll = function(){
-        if(this.scrollY > this.innerHeight / 2){
+        var scrollTop = getScrollTop();
+        
+        if(scrollTop > 50) {
             bkTop[0].style.display = 'block';
         }else{
             bkTop[0].style.display = 'none';
@@ -82,20 +145,34 @@ function backTopPlay() {
     };
     
     bkTop[0].onclick = function(ev){
-        ev = ev || window.event;
-        ev.cancelBubble = true;
+        stopBubble(ev);
 
-        var scX = window.scrollX;
-        var scY = window.scrollY;
+        var scrollTop = getScrollTop();
 
-        valId = setInterval(function(){ //创建定时器返回顶部
-            scY -= 150;
-            window.scrollTo(scX,scY);
-            if(scY <= 0){
+        //创建定时器返回顶部
+        valId = setInterval(function() {
+            scrollTop -= 150;
+
+            window.scrollTo(0, scrollTop);
+
+            if(scrollTop <= 0) {
                 clearInterval(valId);
             }
         },30);
     };
+}
+
+// get scrollTop
+
+function getScrollTop() {
+    return document.documentElement.scrollTop || document.body.scrollTop;
+}
+
+// stopBubble
+
+function stopBubble(ev) {
+    ev = ev || window.event;
+    ev.cancelBubble = true;
 }
 
 // get element

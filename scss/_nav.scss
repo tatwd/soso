@@ -78,7 +78,7 @@ $menu-font-color: #E3E1E1;
             }
 
             // when screen is mobile
-            @media only screen and (max-width: 600px) {
+            @media (max-width: 600px) {
                 & {
                     display: block;
                 }
@@ -117,12 +117,22 @@ $menu-font-color: #E3E1E1;
                             color: #fff;
                         }
                     }
+
+                    &:last-child {
+                        display: none;
+
+                        @media (max-width:600px) {
+                            & {
+                                display: block;
+                            }
+                        }
+                    }
                 }
 
             }
 
             // when screen is mobile        
-            @media only screen and (max-width: 600px) {
+            @media (max-width: 600px) {
                 & {
                     display: none;
                     margin-top: 8px;
@@ -141,7 +151,7 @@ $menu-font-color: #E3E1E1;
                 float: right;
             }
 
-            @media only screen and (max-width: 600px) {
+            @media (max-width: 600px) {
                 & {
                     display: none;
                 }

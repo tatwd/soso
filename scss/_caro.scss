@@ -41,7 +41,7 @@ $tmp-color: #eee;
         left: 0;
         
         opacity: 0;
-        transition: opacity 0.3s;
+        transition: opacity 1s linear;
 
         // padding: 5px;
 
@@ -120,10 +120,13 @@ $tmp-color: #eee;
         bottom: 0;
         left: 0;
         right: 0;
+        // left: 42%;
+        // right: 50%;
 
         // background-color: red;
-        padding: 15px;
+        padding: 10px;
         text-align: center;
+        // text-align-last: center;
 
         .index {
             display: inline-block;
@@ -131,13 +134,19 @@ $tmp-color: #eee;
             height: 12px;
             border-radius: 100%;
             border: 2px solid #6d97ab;
-            // vertical-align: center;
+
+            // transition: width 1s linear;
+
         }
 
         .active {
             background-color: #6d97ab;
-            width: 13px;
-            height: 13px;
+            box-shadow: 0 0 3px #888;
+            // width: 12px;
+            // height: 12px;
+            // border: 0px solid #ddd;
+            // margin-top: 0.5px;
+            // margin-bottom: -0.5px;
 
             // transition: all 0.3s;
         }

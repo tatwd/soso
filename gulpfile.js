@@ -64,7 +64,7 @@ gulp.task('sass', function () {
         }))
         .pipe(autoprefixer({
             browsers: ['last 2 versions'],
-            cascade: false
+            cascade: true
         }))
         .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest(dir._sass._dist))
