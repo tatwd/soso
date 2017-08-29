@@ -11,7 +11,7 @@ $preview-line-height: 24px;
 $line-num: 4;
 $preview-height: $preview-line-height * $line-num;
 
-div.list-container {
+.list-container {
     width: $list-container-width;
     margin: 0 auto;
 

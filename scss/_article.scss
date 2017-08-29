@@ -1,0 +1,109 @@
+// article module
+
+$padding-size: 15px;
+$color-234: #234;
+$color-eee: #eee;
+$color-fff: #fff;
+$title-fsize: 25px; 
+$title-fweight: 100;
+$title-mbottom: 15px;
+$full-text-height: auto;
+$text-color: #757575;
+$text-fsize: 16px;
+$word-break: break-word;
+$line-height: 28px;
+
+.article-container {
+    @extend .list-container;
+
+    // padding: $padding-size;
+    // background-color: $color-234;
+}
+
+.article-container .content {
+    padding: $padding-size;
+    background-color: $color-fff;
+
+    .title {
+        background-color: $color-eee;
+        font-size: $title-fsize;
+        font-weight: $title-fweight;
+        margin-bottom: $title-mbottom;
+        padding: $padding-size;
+    }
+    
+    .author {
+        background-color: $color-eee;
+        margin-bottom: $title-mbottom;
+        padding: $padding-size;
+    }
+
+    .full-text {
+        height: $full-text-height;
+        padding: $padding-size;
+        background-color: $color-eee;
+        color: $text-color;
+        font-size: $text-fsize;
+        word-break: $word-break;
+
+        p {
+            line-height: $line-height;
+            margin-bottom: $line-height;
+        }
+    }
+}
+
+.article-container .article-nav {
+    background-color: $color-234;
+    padding: $padding-size;
+
+    .prev {
+        background-color: $color-eee;
+        display: inline-block;
+        padding: $padding-size;
+        // font-size: 0;
+
+        a {
+            display: inline-block;
+            background-color: $color-234;
+            height: $title-fsize;
+            // vertical-align: center;
+        }
+
+        .icon {
+            // padding: 5px;
+            width: $title-fsize;
+            text-align: center;
+            // font-size: 0;
+
+            .icon-prev {
+                line-height: $title-fsize;
+                display: inherit;
+                background-color: $color-fff;
+            }
+
+            .icon-next {
+                line-height: $title-fsize;
+                display: inherit;
+                background-color: $color-fff;
+            }
+        }
+
+        // .icon-prev {
+        //     width: $title-fsize;
+        // }
+
+        // .icon-next {
+        //     width: $title-fsize;
+        // }
+    }
+
+    .next {
+        @extend .prev;
+        margin-right: 0;
+    }
+}
+
+.soso-comment {
+    padding: $padding-size;
+}
