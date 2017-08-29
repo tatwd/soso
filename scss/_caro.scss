@@ -8,10 +8,11 @@ $tmp-color: #eee;
 .soso-caro {
     height: auto;
     width: $caro-width;
-    background-color: $tmp-color;
+    // background-color: #233;
     margin: 0 auto;
     
-    margin-top: 5px; 
+    margin-top: 5px;
+    // padding: 15px;
     
     position: relative;
     &:before {
@@ -21,7 +22,7 @@ $tmp-color: #eee;
 
     }
 
-    @media only screen and (max-width:768px) {
+    @media (max-width:768px) {
         & {
             width: 100%;
         }
@@ -112,5 +113,33 @@ $tmp-color: #eee;
         right: 0;
         border-top-left-radius: $border-r;
         border-bottom-left-radius: $border-r;
+    }
+
+    .caro-index {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+
+        // background-color: red;
+        padding: 15px;
+        text-align: center;
+
+        .index {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            border-radius: 100%;
+            border: 2px solid #6d97ab;
+            // vertical-align: center;
+        }
+
+        .active {
+            background-color: #6d97ab;
+            width: 13px;
+            height: 13px;
+
+            // transition: all 0.3s;
+        }
     }
 }

@@ -5,7 +5,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 header {
@@ -300,7 +300,6 @@ li {
 .soso-caro {
   height: auto;
   width: 66.66667%;
-  background-color: #eee;
   margin: 0 auto;
   margin-top: 5px;
   position: relative;
@@ -312,7 +311,7 @@ li {
   padding-top: 69%;
 }
 
-@media only screen and (max-width: 768px) {
+@media (max-width: 768px) {
   .soso-caro {
     width: 100%;
   }
@@ -387,13 +386,36 @@ li {
   border-bottom-left-radius: 5px;
 }
 
+.soso-caro .caro-index {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 15px;
+  text-align: center;
+}
+
+.soso-caro .caro-index .index {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 100%;
+  border: 2px solid #6d97ab;
+}
+
+.soso-caro .caro-index .active {
+  background-color: #6d97ab;
+  width: 13px;
+  height: 13px;
+}
+
 div.list-container {
   width: 66.66667%;
   margin: 0 auto;
   height: auto;
 }
 
-@media only screen and (max-width: 768px) {
+@media (max-width: 768px) {
   div.list-container {
     width: 100%;
   }
@@ -403,6 +425,7 @@ ul.article-list {
   border-top: 2px dashed #6D97AB;
   border-bottom: 2px dashed #6D97AB;
   padding: 15px 0;
+  margin: 15px 0;
 }
 
 ul.article-list [class*="article-"] {
@@ -412,8 +435,8 @@ ul.article-list [class*="article-"] {
 }
 
 ul.article-list [class*="article-"]:hover {
-  -webkit-box-shadow: 0px 0px 1px #6D97AB;
-  box-shadow: 0px 0px 1px #6D97AB;
+  -webkit-box-shadow: 0px 0px 2px #6D97AB;
+  box-shadow: 0px 0px 2px #6D97AB;
 }
 
 ul.article-list [class*="article-"] .content {
@@ -422,35 +445,102 @@ ul.article-list [class*="article-"] .content {
 
 ul.article-list [class*="article-"] .content .title {
   font-size: 25px;
+  font-weight: 100;
+  background-color: #eee;
+}
+
+ul.article-list [class*="article-"] .content .title:hover {
+  text-decoration: underline;
 }
 
 ul.article-list [class*="article-"] .content .auther {
-  height: 40px;
+  background-color: #eee;
   margin-top: 5px;
   margin-bottom: 5px;
-  line-height: 40px;
   font-size: 14px;
+  color: #757575;
+}
+
+ul.article-list [class*="article-"] .content .auther .avatar, ul.article-list [class*="article-"] .content .auther .name, ul.article-list [class*="article-"] .content .auther .time, ul.article-list [class*="article-"] .content .auther .tag {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+ul.article-list [class*="article-"] .content .auther .avatar {
+  background-color: #6D97AB;
+  font-size: 0;
+  border-radius: 50%;
+  border: 1px solid #ddd;
+  height: 34px;
+  width: 34px;
+}
+
+ul.article-list [class*="article-"] .content .auther .avatar img {
+  width: 32px;
+  border-radius: inherit;
+}
+
+ul.article-list [class*="article-"] .content .auther .name {
+  color: inherit;
+}
+
+ul.article-list [class*="article-"] .content .auther .name:hover {
+  color: #6D97AB;
+  text-decoration: underline;
+}
+
+ul.article-list [class*="article-"] .content .auther .time {
+  font-size: 14px;
+}
+
+ul.article-list [class*="article-"] .content .auther .tag {
+  font-size: 11px;
+  padding: 1px 6px;
+  border: 1px solid #6D97AB;
+  border-radius: 3px;
+  color: #6D97AB;
 }
 
 ul.article-list [class*="article-"] .content .preview {
-  height: 120px;
-  margin-bottom: 5px;
+  background-color: #eee;
+  height: 96px;
+  margin-bottom: 8px;
   font-size: 14px;
+  color: #757575;
+  line-height: 24px;
+  overflow: hidden;
 }
 
-ul.article-list [class*="article-"] .content .read-more {
-  background-color: #6D97AB;
-  color: #fff;
-  font-size: 14px;
-  padding: 6px;
-  border-radius: 3px;
-  float: right;
+ul.article-list [class*="article-"] .content .meta {
+  background-color: #eee;
 }
 
-ul.article-list [class*="article-"] .content:after {
+ul.article-list [class*="article-"] .content .meta:after {
   content: '';
   clear: both;
   display: block;
+}
+
+ul.article-list [class*="article-"] .content .meta .read-more {
+  background-color: #6D97AB;
+  color: #fff;
+  font-size: 12px;
+  padding: 5px;
+  border-radius: 3px;
+  float: left;
+}
+
+div.load-more {
+  background-color: #a5a5a5;
+  height: 40px;
+  line-height: 40px;
+  font-size: 15px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+div.load-more a {
+  color: #fff;
 }
 
 .soso-button, a.soso-backtop {

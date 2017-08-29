@@ -11,7 +11,7 @@ var gulp         = require('gulp'),
     uglify       = require('gulp-uglify'),
     browserSync  = require('browser-sync').create(),
     plumber      = require('gulp-plumber'),
-    wait         = require('gulp-wait'),
+    // wait         = require('gulp-wait'),
     autoprefixer = require('gulp-autoprefixer'),
     sourcemaps   = require('gulp-sourcemaps');
 

@@ -1,16 +1,25 @@
 // list module
 
 $main-color: #6D97AB;
+$tmp-color: #eee;
+$preview-font-color: #757575;
+
+$list-container-width: (100% / 12) * 8;
+
+$avatar-size: 34px;
+$preview-line-height: 24px;
+$line-num: 4;
+$preview-height: $preview-line-height * $line-num;
 
 div.list-container {
-    width: (100% / 12) * 8;
+    width: $list-container-width;
     margin: 0 auto;
 
     height: auto;
     // padding: 5px;
-    // background-color: #fff;
+    // background-color: #333;
 
-    @media only screen and (max-width:768px){
+    @media (max-width:768px){
         & {
             width: 100%;
         }
@@ -19,9 +28,10 @@ div.list-container {
 
 ul.article-list {
     // background-color: #ddd;
-    border-top: 2px dashed #6D97AB;
-    border-bottom: 2px dashed #6D97AB;
+    border-top: 2px dashed $main-color;
+    border-bottom: 2px dashed $main-color;
     padding: 15px 0;
+    margin: 15px 0;
 
     [class*="article-"] {
         margin-bottom: 15px;
@@ -30,7 +40,7 @@ ul.article-list {
 
         &:hover {
             // background-color: #ddd;
-            box-shadow: 0px 0px 1px #6D97AB;
+            box-shadow: 0px 0px 2px $main-color;
         }
 
         .content {
@@ -39,42 +49,116 @@ ul.article-list {
 
             .title {
                 font-size: 25px;
-                // background-color: #fff;               
+                font-weight: 100;
+                background-color: $tmp-color;
+
+
+                &:hover {
+                    text-decoration: underline;
+                }              
             }
             
             .auther {
-                // background-color: #fff;
-                height: 40px;
+                background-color: $tmp-color;               
+                // height: 40px;
                 margin-top: 5px;
                 margin-bottom: 5px;
 
-                line-height: 40px;
-                font-size: 14px;                
+                // line-height: 40px;
+                font-size: 14px;
+                color: #757575;
+
+                // line-height: 38px;
+
+                .avatar, .name, .time, .tag{
+                    display: inline-block;
+                    vertical-align: middle;
+                }
+
+                .avatar {
+                    background-color: $main-color;
+                    font-size: 0;
+                    border-radius: 50%;
+                    border: 1px solid #ddd;
+                    
+                    height: $avatar-size;
+                    width: $avatar-size;
+                    
+                    img {
+                        width: $avatar-size - 2px;
+                        border-radius: inherit;
+                    }
+                }
+
+                .name {
+                    color: inherit;
+
+                    &:hover {
+                        color: $main-color;
+                        text-decoration: underline;
+                    }
+                }
+
+                .time {
+                    font-size: 14px;
+                }
+
+                .tag {
+                    font-size: 11px;
+                    padding: 1px 6px;
+                    border: 1px solid $main-color;
+                    border-radius: 3px;
+                    color: $main-color;
+                }
             }
 
             .preview {
-                // background-color: #fff;
-                height: 120px;
-                margin-bottom: 5px;
+                background-color: $tmp-color;
+                height: $preview-height;
+                margin-bottom: 8px;
+                // padding;
 
-                font-size: 14px;             
-            }
-
-            .read-more {
-                background-color: $main-color;
-                color: #fff;
                 font-size: 14px;
-                // display: inline-block;
-                padding: 6px;
-                border-radius: 3px;
-                float: right;
+                color: $preview-font-color;
+                line-height: $preview-line-height;
+                // word-wrap: break-word;
+                // word-spacing: 5px;
+                // letter-spacing: 0.5px;
+
+                overflow: hidden;
             }
 
-            &:after {
-                content: '';
-                clear: both;
-                display: block;
+            .meta {
+                background-color: $tmp-color;
+
+                &:after {
+                    content: '';
+                    clear: both;
+                    display: block;
+                }
+
+                .read-more {
+                    background-color: $main-color;
+                    color: #fff;
+                    font-size: 12px;
+                    padding: 5px;
+                    border-radius: 3px;
+                    float: left;
+                }
             }
         }
+    }
+}
+
+div.load-more {
+    background-color: #a5a5a5;
+    height: 40px;
+    line-height: 40px;
+    font-size: 15px;
+    border-radius: 20px;
+    text-align: center;
+
+    a {
+        color: #fff;
     }
 }
