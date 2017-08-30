@@ -587,41 +587,66 @@ div.load-more a {
 }
 
 .article-container .article-nav {
-  background-color: #234;
+  background-color: #fff;
   padding: 15px;
 }
 
-.article-container .article-nav .prev, .article-container .article-nav .next {
+.article-container .article-nav:after {
+  content: '';
+  clear: both;
+  display: block;
+}
+
+.article-container .article-nav div {
   background-color: #eee;
   display: inline-block;
   padding: 15px;
 }
 
-.article-container .article-nav .prev a, .article-container .article-nav .next a {
+.article-container .article-nav div a {
   display: inline-block;
-  background-color: #234;
-  height: 25px;
+  vertical-align: middle;
 }
 
-.article-container .article-nav .prev .icon, .article-container .article-nav .next .icon {
-  width: 25px;
-  text-align: center;
+.article-container .article-nav div .icon {
+  padding: 5px;
+  font-size: 0;
 }
 
-.article-container .article-nav .prev .icon .icon-prev, .article-container .article-nav .next .icon .icon-prev {
-  line-height: 25px;
+.article-container .article-nav .prev {
+  float: left;
+}
+
+.article-container .article-nav .prev .prev-text:hover {
+  text-decoration: underline;
+}
+
+.article-container .article-nav .prev .icon .icon-prev {
   display: inherit;
-  background-color: #fff;
-}
-
-.article-container .article-nav .prev .icon .icon-next, .article-container .article-nav .next .icon .icon-next {
-  line-height: 25px;
-  display: inherit;
-  background-color: #fff;
+  width: 12px;
+  height: 12px;
+  border-top: 2px solid #234;
+  border-left: 2px solid #234;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
 }
 
 .article-container .article-nav .next {
-  margin-right: 0;
+  float: right;
+}
+
+.article-container .article-nav .next .next-text:hover {
+  text-decoration: underline;
+}
+
+.article-container .article-nav .next .icon .icon-next {
+  display: inherit;
+  width: 12px;
+  height: 12px;
+  border-top: 2px solid #234;
+  border-right: 2px solid #234;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 
 .soso-comment {

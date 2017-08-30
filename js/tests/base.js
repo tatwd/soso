@@ -49,8 +49,15 @@ function menuMobilePlay() {
 // caroPlay
 
 function caroPlay() {
-    var caro = $('soso-caro')
+    var caro = $('soso-caro');
+
+    // 判断当前页面是否有轮播元素
+    if(!hasElement(caro)) {
+        return;
+    }
+
     var caroItem  = caro[0].getElementsByClassName('item'); 
+    // var caroItem  = caro[0].getElementsByTagName('div'); 
     var caroCtrls = $('caro-ctrl');
     var caroIndex = $('caro-index')[0].getElementsByClassName('index'); 
     var curent = 0;
@@ -160,6 +167,12 @@ function backTopPlay() {
             }
         },30);
     };
+}
+
+// hasElement
+
+function hasElement(ele) {
+    return (ele[0]|| ele).nodeType;
 }
 
 // get scrollTop
