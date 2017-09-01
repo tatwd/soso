@@ -31,8 +31,10 @@ function menuMobilePlay() {
   
         if(!isClicked) {
             menuNormal[0].style.display = 'block';
+            // menuNormal[0].style.height = '250px';
         } else {
-            menuNormal[0].style.display = 'none';            
+            menuNormal[0].style.display = 'none';
+            // menuNormal[0].style.height = '0';         
         }
         isClicked = !isClicked;
     }

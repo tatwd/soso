@@ -570,6 +570,47 @@ div.load-more a {
   background-color: #eee;
   margin-bottom: 15px;
   padding: 15px;
+  color: #757575;
+}
+
+.article-container .content .author .avatar, .article-container .content .author .name, .article-container .content .author .time, .article-container .content .author .tag {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.article-container .content .author .avatar {
+  background-color: #6D97AB;
+  font-size: 0;
+  border-radius: 50%;
+  border: 1px solid #ddd;
+  height: 34px;
+  width: 34px;
+}
+
+.article-container .content .author .avatar img {
+  width: 32px;
+  border-radius: inherit;
+}
+
+.article-container .content .author .name {
+  color: inherit;
+}
+
+.article-container .content .author .name:hover {
+  color: #6D97AB;
+  text-decoration: underline;
+}
+
+.article-container .content .author .time {
+  font-size: 14px;
+}
+
+.article-container .content .author .tag {
+  font-size: 11px;
+  padding: 1px 6px;
+  border: 1px solid #6D97AB;
+  border-radius: 3px;
+  color: #6D97AB;
 }
 
 .article-container .content .full-text {
@@ -584,6 +625,38 @@ div.load-more a {
 .article-container .content .full-text p {
   line-height: 28px;
   margin-bottom: 28px;
+}
+
+.article-container .content .full-text .illus {
+  height: auto;
+  max-width: 100%;
+  margin: 0 auto;
+  display: block;
+  border: 1px solid #888;
+  border-radius: 5px;
+  padding: 5px;
+  background-color: #fff;
+  margin-bottom: 15px;
+}
+
+.article-container .follow {
+  background-color: #fff;
+  padding: 15px;
+  text-align: center;
+}
+
+.article-container .follow .follow-btn {
+  background-color: #42c02e;
+  display: inline-block;
+  padding: 10px 30px;
+  color: #fff;
+  border-radius: 18px;
+  font-size: 16px;
+}
+
+.article-container .follow .follow-btn .icon-follow {
+  display: inherit;
+  background-color: #fff;
 }
 
 .article-container .article-nav {

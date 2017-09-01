@@ -18,4 +18,4 @@
     Q: Error: File to import not found or unreadable
     A: "atomic_save": true in sublime text 3, vscode?
 
-  - soso-caro does not support ie.
+  - soso-caro does not support ie.(solved)

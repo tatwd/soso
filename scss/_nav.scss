@@ -70,7 +70,7 @@ $menu-font-color: #E3E1E1;
         .menu-mobile {
             @extend .soso-logo;
             background-color: $menu-bg-color;
-            display: none;       
+            display: none;
 
             a {
                 float: right;
@@ -90,6 +90,8 @@ $menu-font-color: #E3E1E1;
         .menu-normal {
             background-color: $menu-bg-color;
             height: auto;
+
+            // transition: height 1s linear;
 
             .menu-x {
                 margin-left: $menu-margin-left;

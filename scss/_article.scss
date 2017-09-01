@@ -4,6 +4,7 @@ $padding-size: 15px;
 $color-234: #234;
 $color-eee: #eee;
 $color-fff: #fff;
+$color-42c: #42c02e;
 $title-fsize: 25px; 
 $title-fweight: 100;
 $title-mbottom: 15px;
@@ -36,9 +37,55 @@ $icon-bsize: 2px;
     }
     
     .author {
-        background-color: $color-eee;
+        // background-color: $color-eee;
+        // margin-bottom: $title-mbottom;
+        // padding: $padding-size;
+        
+        background-color: $color-eee;               
         margin-bottom: $title-mbottom;
         padding: $padding-size;
+        color: #757575;
+
+        .avatar, .name, .time, .tag{
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .avatar {
+            background-color: $main-color;
+            font-size: 0;
+            border-radius: 50%;
+            border: 1px solid #ddd;
+            
+            height: $avatar-size;
+            width: $avatar-size;
+            
+            img {
+                width: $avatar-size - 2px;
+                border-radius: inherit;
+            }
+        }
+
+        .name {
+            color: inherit;
+
+            &:hover {
+                color: $main-color;
+                text-decoration: underline;
+            }
+        }
+
+        .time {
+            font-size: 14px;
+        }
+
+        .tag {
+            font-size: 11px;
+            padding: 1px 6px;
+            border: 1px solid $main-color;
+            border-radius: 3px;
+            color: $main-color;
+        }
     }
 
     .full-text {
@@ -52,6 +99,41 @@ $icon-bsize: 2px;
         p {
             line-height: $line-height;
             margin-bottom: $line-height;
+        }
+
+        .illus {
+            height: auto;
+            max-width: 100%;
+            margin: 0 auto;
+            display: block;
+            border: 1px solid #888;
+            border-radius: 5px;
+            padding: $padding-size - 10px;
+            background-color: $color-fff;
+            margin-bottom: 15px;
+        }
+    }
+}
+
+.article-container .follow {
+    background-color: $color-fff;
+    padding: $padding-size;
+    // border: 1px solid #888;
+    text-align: center;
+
+    .follow-btn {
+        background-color: $color-42c;
+        display: inline-block;
+        padding: 10px ($padding-size + 15px);
+        color: $color-fff;
+        border-radius: 18px;
+        font-size: 16px;
+
+        .icon-follow {
+            display: inherit;
+            // width: 25px;
+            // height: 25px;
+            background-color: $color-fff;
         }
     }
 }
