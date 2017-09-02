@@ -52,6 +52,10 @@ li {
   list-style: none;
 }
 
+hr {
+  height: 0;
+}
+
 * {
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -425,14 +429,14 @@ li {
           box-shadow: 0 0 3px #888;
 }
 
-.list-container, .article-container, .sign-container {
+.list-container, .article-container, .sign-container, .card-container {
   width: 66.66667%;
   margin: 0 auto;
   height: auto;
 }
 
 @media (max-width: 768px) {
-  .list-container, .article-container, .sign-container {
+  .list-container, .article-container, .sign-container, .card-container {
     width: 100%;
   }
 }
@@ -735,6 +739,77 @@ div.load-more a {
 .sign-container {
   background-color: #234;
   height: 410px;
+}
+
+.card-container {
+  background-color: #fff;
+  padding: 15px;
+}
+
+.card-container .title-box {
+  padding: 15px;
+  background-color: #6ecaf9;
+  color: #fff;
+  font-size: 25px;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+}
+
+.card-container:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+.card-container .card {
+  height: 400px;
+  background-color: #f8f8f8;
+  padding: 15px;
+  margin: 15px 5px;
+  text-align: center;
+  border-top: 6px solid #6d97ab;
+  border-radius: 3px;
+}
+
+.card-container .card:hover {
+  -webkit-box-shadow: 0 0 4px #888;
+          box-shadow: 0 0 4px #888;
+}
+
+.card-container .card .author {
+  display: block;
+  margin-bottom: 15px;
+}
+
+.card-container .card .author .avatar {
+  background-color: #6d97ab;
+  display: inline-block;
+  border: 1px solid #888;
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+}
+
+.card-container .card .follow-btn {
+  background-color: #42c02e;
+  display: inline-block;
+  color: #fff;
+  padding: 10px 30px;
+  border-radius: 18px;
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.card-container .card .recent-update {
+  text-align: center;
+  padding: 15px 0;
+}
+
+.card-container .card .recent-update .new {
+  display: block;
+  margin-bottom: 5px;
 }
 
 .soso-button, a.soso-backtop {

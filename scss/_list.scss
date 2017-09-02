@@ -158,6 +158,12 @@ div.load-more {
     border-radius: 20px;
     text-align: center;
 
+    // &:after {
+    //     content: "";
+    //     clear: both;
+    //     display: block;
+    // }
+
     a {
         color: #fff;
     }
