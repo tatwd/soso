@@ -2,9 +2,15 @@
  * SOSO (1.0.0-alpha.1)
  * @_king
  */
+html {
+  height: 100%;
+}
+
 body {
   margin: 0;
   padding: 0;
+  min-height: 100%;
+  border: 1px solid red;
   font-family: 'Roboto', sans-serif;
 }
 
@@ -419,14 +425,14 @@ li {
           box-shadow: 0 0 3px #888;
 }
 
-.list-container, .article-container {
+.list-container, .article-container, .sign-container {
   width: 66.66667%;
   margin: 0 auto;
   height: auto;
 }
 
 @media (max-width: 768px) {
-  .list-container, .article-container {
+  .list-container, .article-container, .sign-container {
     width: 100%;
   }
 }
@@ -724,6 +730,11 @@ div.load-more a {
 
 .soso-comment {
   padding: 15px;
+}
+
+.sign-container {
+  background-color: #234;
+  height: 410px;
 }
 
 .soso-button, a.soso-backtop {

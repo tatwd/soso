@@ -1,0 +1,12 @@
+// container module
+// 
+
+.sign-container {
+    @extend .list-container;
+
+    background-color: $color-234;
+    height: 410px;
+    // height: 400px;
+    // min-height: 100%;
+    // height: 100vh;
+}
