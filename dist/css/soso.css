@@ -756,15 +756,19 @@ div.load-more a {
   border-radius: 5px;
 }
 
-.card-container:after {
+.card-container .card-box {
+  border: 1px solid #234;
+}
+
+.card-container .card-box:after {
   content: "";
   clear: both;
   display: block;
 }
 
-.card-container .card {
+.card-container .card-box .card {
   height: 400px;
-  background-color: #f8f8f8;
+  background-color: #234;
   padding: 15px;
   margin: 15px 5px;
   text-align: center;
@@ -772,17 +776,17 @@ div.load-more a {
   border-radius: 3px;
 }
 
-.card-container .card:hover {
+.card-container .card-box .card:hover {
   -webkit-box-shadow: 0 0 4px #888;
           box-shadow: 0 0 4px #888;
 }
 
-.card-container .card .author {
+.card-container .card-box .card .author {
   display: block;
   margin-bottom: 15px;
 }
 
-.card-container .card .author .avatar {
+.card-container .card-box .card .author .avatar {
   background-color: #6d97ab;
   display: inline-block;
   border: 1px solid #888;
@@ -791,7 +795,7 @@ div.load-more a {
   border-radius: 50%;
 }
 
-.card-container .card .follow-btn {
+.card-container .card-box .card .follow-btn {
   background-color: #42c02e;
   display: inline-block;
   color: #fff;
@@ -801,12 +805,12 @@ div.load-more a {
   margin-bottom: 15px;
 }
 
-.card-container .card .recent-update {
+.card-container .card-box .card .recent-update {
   text-align: center;
   padding: 15px 0;
 }
 
-.card-container .card .recent-update .new {
+.card-container .card-box .card .recent-update .new {
   display: block;
   margin-bottom: 5px;
 }

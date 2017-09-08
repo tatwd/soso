@@ -1,6 +1,8 @@
 // container module
 // 
 
+$color-f8f: #f8f8f8;
+
 .sign-container {
     @extend .list-container;
 
@@ -29,62 +31,72 @@
         border-radius: 5px;
     }
 
-    &:after {
-        content: "";
-        clear: both;
-        display: block;
-    }
+    // &:after {
+    //     content: "";
+    //     clear: both;
+    //     display: block;
+    // }
 
-    .card {
-        height: 400px;
-        background-color: #f8f8f8;
-        padding: 15px;
-        margin: 15px 5px;
-        text-align: center;
-        border-top: 6px solid #6d97ab;
-        border-radius: 3px;
+    .card-box {
+        border: 1px solid $color-234;
 
-        &:hover {
-            box-shadow: 0 0 4px #888;
-        }
-
-        .author {
+        &:after {
+            content: "";
+            clear: both;
             display: block;
-            // background-color: $color-eee;
-            margin-bottom: 15px;
-
-            .avatar {
-
-                background-color: #6d97ab;
-                display: inline-block;
-                border: 1px solid #888;
-                height: 80px;
-                width: 80px;
-                border-radius: 50%;
-                // margin-top: -80px 0 10px;
-            }
         }
 
-        .follow-btn {
-            background-color: $color-42c;
-            display: inline-block;
-            color: $color-fff;
-            padding: 10px ($padding-size + 15px);
-            border-radius: 18px;
-            font-size: 16px;
-
-            margin-bottom: 15px;
-        }
-
-        .recent-update {
-            // background-color: $color-eee;
+        .card {
+            height: 400px;
+            background-color: $color-234;
+            padding: 15px;
+            margin: 15px 5px;
             text-align: center;
-            padding: 15px 0;
-
-            .new {
+            border-top: 6px solid #6d97ab;
+            border-radius: 3px;
+    
+            &:hover {
+                box-shadow: 0 0 4px #888;
+            }
+    
+            .author {
                 display: block;
-                // background-color: #FFF;
-                margin-bottom: 5px;
+                // background-color: $color-eee;
+                margin-bottom: 15px;
+    
+                .avatar {
+    
+                    background-color: #6d97ab;
+                    display: inline-block;
+                    border: 1px solid #888;
+                    height: 80px;
+                    width: 80px;
+                    border-radius: 50%;
+                    // margin-top: -80px 0 10px;
+                }
+            }
+    
+            .follow-btn {
+                background-color: $color-42c;
+                display: inline-block;
+                color: $color-fff;
+                padding: 10px ($padding-size + 15px);
+                border-radius: 18px;
+                font-size: 16px;
+    
+                margin-bottom: 15px;
+            }
+    
+            .recent-update {
+                // background-color: $color-eee;
+                text-align: center;
+                padding: 15px 0;
+    
+                .new {
+                    display: block;
+                    // background-color: #FFF;
+                    margin-bottom: 5px;
+                }
             }
         }
     }
