@@ -1,4 +1,4 @@
-1.搭建开发环境 Build development environment
+1.依赖 Dependencies
 
   + gulp
   + gulp-sass
