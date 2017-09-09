@@ -11,6 +11,7 @@
   + browser-sync
   - babel-cli
   - webpack
+  + gulp-wait
 
 2.问题 Issues
 
