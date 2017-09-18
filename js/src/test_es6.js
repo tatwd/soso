@@ -1,3 +1,1 @@
-let fn = (e) => {
-    return e + 1;
-}
+let fn = (e) => e + 1;
