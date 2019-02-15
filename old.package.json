@@ -1,0 +1,36 @@
+{
+  "name": "soso",
+  "version": "1.0.0-alpha.1",
+  "description": "This is a code library for the web.",
+  "main": "dist/js/soso",
+  "scripts": {
+    "start": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tatwd/soso.git"
+  },
+  "keywords": [
+    "css",
+    "sass",
+    "responsive",
+    "es6",
+    "web"
+  ],
+  "author": "_king",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tatwd/soso/issues"
+  },
+  "homepage": "https://github.com/tatwd/soso#readme",
+  "devDependencies": {
+    "browser-sync": "^2.18.13",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-sass": "^3.2.1",
+    "gulp-sourcemaps": "^2.6.1",
+    "gulp-uglify": "^3.0.0",
+    "gulp-wait": "0.0.2"
+  }
+}
