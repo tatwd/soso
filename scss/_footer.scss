@@ -1,45 +1,45 @@
 .soso-footer {
-    &:after {
-        content: '';
-        clear: both;
-        display: block;
-    }
+  &:after {
+    content: '';
+    clear: both;
+    display: block;
+  }
 }
 
 .footer-container {
-    // background-color: #234;
-    padding: 25px 15px;
-    font-size: 14px;
-    color: #123;
+  // background-color: #234;
+  padding: 25px 15px;
+  font-size: 14px;
+  color: #123;
 
-    .copyright {
-        text-align: center;
-        font-size: inherit;
-        color: inherit;
+  .copyright {
+    text-align: center;
+    font-size: inherit;
+    color: inherit;
 
-        .soso-author {
-            &:hover {
-                background-color: #6d97ab;
-                color: #fff;
-                border-radius: 2px;
-            }
-        }
+    .soso-author {
+      &:hover {
+        background-color: #6d97ab;
+        color: #fff;
+        border-radius: 2px;
+      }
     }
+  }
 
-    .links {
-        $icon-w-h: 24px;
-        $icon-a-display: inline-block;
+  .links {
+    $icon-w-h: 24px;
+    $icon-a-display: inline-block;
 
-        // background-color: #eee;
-        margin-top: 10px;
-        text-align: center;
-        font-size: 0;
+    // background-color: #eee;
+    margin-top: 10px;
+    text-align: center;
+    font-size: 0;
 
-        [class*="to-"] {
-            // border: 1px solid red;
-            display: $icon-a-display;
-            width: $icon-w-h;
-            height: $icon-w-h;
-        }
+    [class*='to-'] {
+      // border: 1px solid red;
+      display: $icon-a-display;
+      width: $icon-w-h;
+      height: $icon-w-h;
     }
+  }
 }

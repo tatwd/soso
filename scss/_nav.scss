@@ -1,6 +1,6 @@
 // nav class
 
-$nav-bg-color: #6D97AB;
+$nav-bg-color: #6d97ab;
 $nav-padding: 8px 16px;
 
 $logo-bg-color: $nav-bg-color;
@@ -14,150 +14,148 @@ $menu-margin-left: 10px;
 $li-height: 40px;
 
 $menu-font-size: 14px;
-$menu-font-color: #E3E1E1;
+$menu-font-color: #e3e1e1;
 
 .soso-nav {
-    height: auto;
-    background-color: $nav-bg-color;
-    padding: 8px 0;
+  height: auto;
+  background-color: $nav-bg-color;
+  padding: 8px 0;
+
+  // clear float
+  &:after {
+    content: '';
+    clear: both;
+    display: block;
+  }
+
+  @media (max-width: 768px) {
+    padding: 8px 16px;
+  }
+
+  .nav-container {
+    // border: 1px solid red;
 
     // clear float
     &:after {
-        content: '';
-        clear: both;
-        display: block;
+      content: '';
+      clear: both;
+      display: block;
+    }
+    float: none;
+    margin: 0 auto;
+
+    // logo class
+
+    .soso-logo {
+      height: inherit;
+      background-color: $logo-bg-color;
+      font-size: 0; // clear default margin-bottom of img
+
+      a {
+        width: $a-width;
+        border: $a-border-size solid #fff;
+        border-radius: 8px;
+        float: left;
+
+        img {
+          height: 36px;
+          max-width: 100%;
+          border-radius: inherit;
+        }
+      }
     }
 
-    @media (max-width:768px) {
-        padding: 8px 16px;
+    // mobile menu icon
+
+    .menu-mobile {
+      @extend .soso-logo;
+      background-color: $menu-bg-color;
+      display: none;
+
+      a {
+        float: right;
+        // display: inline-block;
+      }
+
+      // when screen is mobile
+      @media (max-width: 600px) {
+        & {
+          display: block;
+        }
+      }
     }
 
-    .nav-container {
-        // border: 1px solid red;
-        
-        // clear float
+    // menu-normal
+
+    .menu-normal {
+      background-color: $menu-bg-color;
+      height: auto;
+
+      // transition: height 1s linear;
+
+      .menu-x {
+        margin-left: $menu-margin-left;
+
         &:after {
-            content: '';
-            clear: both;
-            display: block;
+          content: '';
+          clear: both;
+          display: block;
         }
-        float: none;
-        margin: 0 auto;
 
-        // logo class
+        li.item {
+          height: $li-height;
+          line-height: $li-height;
+          text-align: center;
 
-        .soso-logo {
-            height: inherit;
-            background-color: $logo-bg-color;
-            font-size: 0; // clear default margin-bottom of img
+          a {
+            color: $menu-font-color;
+            font-size: $menu-font-size;
 
-            a {
-                width: $a-width;
-                border: $a-border-size solid #fff;
-                border-radius: 8px;
-                float: left;
-
-                img {
-                    height: 36px;
-                    max-width: 100%;
-                    border-radius: inherit;
-                }
+            &:hover {
+              color: #fff;
             }
-        }
 
-        // mobile menu icon
+            &.active {
+              color: #fff;
+            }
+          }
 
-        .menu-mobile {
-            @extend .soso-logo;
-            background-color: $menu-bg-color;
+          &:last-child {
             display: none;
 
-            a {
-                float: right;
-                // display: inline-block;
-            }
-
-            // when screen is mobile
             @media (max-width: 600px) {
-                & {
-                    display: block;
-                }
+              & {
+                display: block;
+              }
             }
+          }
         }
+      }
 
-        // menu-normal
-
-        .menu-normal {
-            background-color: $menu-bg-color;
-            height: auto;
-
-            // transition: height 1s linear;
-
-            .menu-x {
-                margin-left: $menu-margin-left;
-
-                &:after {
-                    content: '';
-                    clear: both;
-                    display: block;
-                }
-
-                li.item {
-                    height: $li-height;
-                    line-height: $li-height;
-                    text-align: center;
-                    
-                    a {
-                        color: $menu-font-color;
-                        font-size: $menu-font-size;
-
-                        &:hover {
-                            color: #fff;
-                        }
-
-                        &.active {
-                            color: #fff;
-                        }
-                    }
-
-                    &:last-child {
-                        display: none;
-
-                        @media (max-width:600px) {
-                            & {
-                                display: block;
-                            }
-                        }
-                    }
-                }
-
-            }
-
-            // when screen is mobile        
-            @media (max-width: 600px) {
-                & {
-                    display: none;
-                    margin-top: 8px;
-                    border-top: 1px solid #62889A;
-                }
-            }
-
+      // when screen is mobile
+      @media (max-width: 600px) {
+        & {
+          display: none;
+          margin-top: 8px;
+          border-top: 1px solid #62889a;
         }
-
-        // soso-user
-
-        .soso-user {
-            @extend .soso-logo;
-            
-            a {
-                float: right;
-            }
-
-            @media (max-width: 600px) {
-                & {
-                    display: none;
-                }
-            }
-        }
+      }
     }
+
+    // soso-user
+
+    .soso-user {
+      @extend .soso-logo;
+
+      a {
+        float: right;
+      }
+
+      @media (max-width: 600px) {
+        & {
+          display: none;
+        }
+      }
+    }
+  }
 }

@@ -1,16 +1,15 @@
-!function () {
-    console.log('Hello SOSO!');
-    
-    var obj =  {
-        num: 13
-    };
+!(function() {
+  console.log('Hello SOSO!');
 
-    /* add function */
-    function add(e) {
-        return e.num + 1;
-    }
+  var obj = {
+    num: 13
+  };
 
-    var sum = add(obj);
+  /* add function */
+  function add(e) {
+    return e.num + 1;
+  }
 
-    console.log('sum:',sum);
-}();
+  var sum = add(obj);
+  console.log('sum:', sum);
+})();

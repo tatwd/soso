@@ -1,97 +1,72 @@
-/**
- * ----
- * ES5 Syntax
- * ----
- */
+var { src, dest, watch, series, lastRun } = require('gulp');
+var { reload, init, stream } = require('browser-sync').create();
+var plumber = require('gulp-plumber');
+var uglify = require('gulp-uglify');
+var autoprefixer = require('gulp-autoprefixer');
+var sass = require('gulp-sass');
+var sourcemaps = require('gulp-sourcemaps');
+// var wait = require('gulp-wait');
+var { SRC_DIR } = require('./config');
 
-'use strict';
-
-var gulp         = require('gulp'),
-    sass         = require('gulp-sass'),
-    uglify       = require('gulp-uglify'),
-    browserSync  = require('browser-sync').create(),
-    plumber      = require('gulp-plumber'),
-    // wait         = require('gulp-wait'),
-    autoprefixer = require('gulp-autoprefixer'),
-    sourcemaps   = require('gulp-sourcemaps');
-
-var reload = browserSync.reload;
-
-// directories objects
-
-var dir = {
-    _sass: {
-        _main: 'scss/soso.scss',
-        _src : 'scss/*.scss',
-        _dist: 'dist/css'
-    },
-    _js: {
-        _src : 'js/src/*.js',
-        _swap: 'js/dist',
-        _test: 'js/tests/*.js',
-        _dist: 'dist/js',
-    },
-    _html: {
-        _src: './**/*.html'
-    }
+// css compile and bundle
+function css(next) {
+  src(SRC_DIR.CSS.ENTRY)
+    //.pipe(wait(200)) // 200ms delay
+    .pipe(plumber())
+    .pipe(sourcemaps.init())
+    .pipe(
+      sass({
+        outputStyle: 'expanded'
+      })
+    )
+    .pipe(
+      autoprefixer({
+        browsers: ['last 2 versions'],
+        cascade: true
+      })
+    )
+    .pipe(sourcemaps.write('.'))
+    .pipe(dest(SRC_DIR.CSS.OUTPUT))
+    .pipe(
+      reload({
+        stream: true
+      })
+    );
+  next();
 }
 
+// minify js task
+function minify(next) {
+  src(SRC_DIR.JS.TEST)
+    .pipe(plumber())
+    .pipe(uglify())
+    .pipe(dest(SRC_DIR.JS.OUTPUT))
+    .pipe(stream());
+  next();
+}
 
-/**
- * ----
- * Tasks Definition
- * ----
- */
+// start a server
+function serve(next) {
+  init({
+    server: {
+      baseDir: './',
+      index: 'demo.html'
+    }
+  });
 
-// serve task
-gulp.task('serve', ['sass', 'uglify'], function () {
-    browserSync.init({
-        server: {
-            baseDir: './',
-            index: 'demo.html'
-        }
-    });
-});
+  watch(SRC_DIR.CSS.INPUT, css);
+  watch(SRC_DIR.JS.TEST, minify);
+  watch(SRC_DIR.HTML.INPUT).on('change', reload);
 
-// sass task
-gulp.task('sass', function () {
-    return gulp.src(dir._sass._main)
-        // .pipe(wait(200)) // 200ms delay
-        .pipe(plumber())
-        .pipe(sourcemaps.init())
-        .pipe(sass({
-            outputStyle: 'expanded'
-        }))
-        .pipe(autoprefixer({
-            browsers: ['last 2 versions'],
-            cascade: true
-        }))
-        .pipe(sourcemaps.write('.'))
-        .pipe(gulp.dest(dir._sass._dist))
-        .pipe(browserSync.stream());
-});
+  next();
+}
 
-// uglify task
-gulp.task('uglify', function () {
-    gulp.src(dir._js._test)
-        .pipe(plumber())
-        .pipe(uglify())
-        .pipe(gulp.dest(dir._js._dist))
-        .pipe(browserSync.stream());
-});
+// for travis ci
+function travis(next) {
+  console.log('Run gulp tasks successfully!');
+  next();
+  process.exit(0);
+}
 
-// watch task
-gulp.task('watch', function () {
-    gulp.watch(dir._sass._src, ['sass']);
-    gulp.watch(dir._js._test, ['uglify']);
-    gulp.watch(dir._html._src).on('change', reload);
-});
-
-// default task
-gulp.task('default', ['serve', 'watch']);
-
-// travis task for travis-ci test
-gulp.task('travis', ['default'], function() {
-    console.log('Run gulp successfully!');
-    process.exit(0);
-});
+exports.travis = series(minify, css, travis);
+exports.default = series(minify, css, serve);

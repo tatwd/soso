@@ -1,197 +1,199 @@
 window.onload = function() {
-    
-    // menu click event begin
+  console.log('loaded')
+  // menu click event begin
 
-    menuMobilePlay();
+  menuMobilePlay();
 
-    // menu click event end
-    // -----------------------
-    // caro-play begin
-    
-    caroPlay();
+  // menu click event end
+  // -----------------------
+  // caro-play begin
 
-    // caro-play end
-    // --------------------------
-    // back top begin
-    
-    backTopPlay();
+  caroPlay();
 
-    // back top end
-}
+  // caro-play end
+  // --------------------------
+  // back top begin
+
+  backTopPlay();
+
+  // back top end
+};
 
 // menuMobilePlay
 
 function menuMobilePlay() {
-    var menuMobile = $('menu-mobile');
-    var menuNormal = $('menu-normal');
-    var isClicked  = false;
+  var menuMobile = $('menu-mobile');
+  var menuNormal = $('menu-normal');
+  var isClicked = false;
 
-    menuMobile[0].onclick = function(ev) {
-        stopBubble(ev);
-  
-        if(!isClicked) {
-            menuNormal[0].style.display = 'block';
-            // menuNormal[0].style.height = '250px';
-        } else {
-            menuNormal[0].style.display = 'none';
-            // menuNormal[0].style.height = '0';         
-        }
-        isClicked = !isClicked;
-    }
+  menuMobile[0].onclick = function(ev) {
+    stopBubble(ev);
 
-    window.onresize = function () {
-        if(this.innerWidth > 600 ) {
-            menuNormal[0].style.display = 'block';
-        } else if(!isClicked) {
-            menuNormal[0].style.display = 'none';
-        }
+    if (!isClicked) {
+      menuNormal[0].style.display = 'block';
+      // menuNormal[0].style.height = '250px';
+    } else {
+      menuNormal[0].style.display = 'none';
+      // menuNormal[0].style.height = '0';
     }
+    isClicked = !isClicked;
+  };
+
+  window.onresize = function() {
+    if (this.innerWidth > 600) {
+      menuNormal[0].style.display = 'block';
+    } else if (!isClicked) {
+      menuNormal[0].style.display = 'none';
+    }
+  };
 }
 
 // caroPlay
 
 function caroPlay() {
-    var caro = $('soso-caro');
+  var caro = $('soso-caro');
 
-    // 判断当前页面是否有轮播元素
-    if(!hasElement(caro)) {
-        return;
+  // 判断当前页面是否有轮播元素
+  if (!hasElement(caro)) {
+    return;
+  }
+
+  var caroItem = caro[0].getElementsByClassName('item');
+  // var caroItem  = caro[0].getElementsByTagName('div');
+  var caroCtrls = $('caro-ctrl');
+  var caroIndex = $('caro-index')[0].getElementsByClassName('index');
+  var curent = 0;
+
+  // 淡入
+  function fadeIn() {
+    caroItem[curent].classList.add('active');
+    caroIndex[curent].classList.add('active');
+  }
+  // 淡出
+  function fadeOut() {
+    caroItem[curent].classList.remove('active');
+    caroIndex[curent].classList.remove('active');
+  }
+
+  // 前进
+  function go() {
+    fadeOut();
+
+    curent++;
+    if (curent >= caroItem.length) {
+      curent = 0;
     }
 
-    var caroItem  = caro[0].getElementsByClassName('item'); 
-    // var caroItem  = caro[0].getElementsByTagName('div'); 
-    var caroCtrls = $('caro-ctrl');
-    var caroIndex = $('caro-index')[0].getElementsByClassName('index'); 
-    var curent = 0;
+    fadeIn();
+  }
 
-    // 淡入 
-    function fadeIn() {
-        caroItem[curent].classList.add('active');
-        caroIndex[curent].classList.add('active');
+  // 返回
+  function bk() {
+    fadeOut();
+
+    if (curent == 0) {
+      curent = caroItem.length;
     }
-    // 淡出
-    function fadeOut() {
-        caroItem[curent].classList.remove('active');
-        caroIndex[curent].classList.remove('active');
+    curent--;
+
+    fadeIn();
+  }
+
+  var inter = setInterval(go, 4000);
+
+  // 鼠标移入
+  caro[0].onmouseover = function(ev) {
+    stopBubble(ev);
+
+    clearInterval(inter);
+
+    for (var i = caroCtrls.length - 1; i >= 0; i--) {
+      caroCtrls[i].style.display = 'block';
     }
+  };
 
-    // 前进
-    function go() {
-        fadeOut();
+  // 鼠标移出
+  caro[0].onmouseout = function(ev) {
+    stopBubble(ev);
 
-        curent++;
-        if(curent >= caroItem.length) {
-            curent = 0;
-        }
+    inter = setInterval(go, 2000);
 
-        fadeIn();
+    for (var i = caroCtrls.length - 1; i >= 0; i--) {
+      caroCtrls[i].style.display = 'none';
     }
+  };
 
-    // 返回
-    function bk() {
-        fadeOut();
+  caroCtrls[0].onclick = function(ev) {
+    stopBubble(ev);
 
-        if(curent == 0) {
-            curent = caroItem.length;
-        }
-        curent--;
+    bk();
+  };
 
-        fadeIn();
-    }
+  caroCtrls[1].onclick = function(ev) {
+    stopBubble(ev);
 
-    var inter = setInterval(go, 4000);
-
-    // 鼠标移入
-    caro[0].onmouseover = function(ev) {
-        stopBubble(ev)
-
-        clearInterval(inter);
-
-        for (var i = caroCtrls.length - 1; i >= 0; i--) {
-            caroCtrls[i].style.display = 'block';
-        }
-    };
-    
-    // 鼠标移出
-    caro[0].onmouseout = function(ev) {
-        stopBubble(ev);
-
-        inter = setInterval(go, 2000);
-
-        for (var i = caroCtrls.length - 1; i >= 0; i--) {
-            caroCtrls[i].style.display = 'none';
-        }
-    };
-
-    caroCtrls[0].onclick = function(ev) {
-        stopBubble(ev);
-
-        bk();
-    };
-
-    caroCtrls[1].onclick = function(ev) {
-        stopBubble(ev);
-
-        go();
-    };
+    go();
+  };
 }
 
 // backTopPlay
 
 function backTopPlay() {
-    var bkTop = $('soso-backtop');
-    var valId = null;
+  var bkTop = $('soso-backtop');
+  var valId = null;
 
-    // 监听滑条移动
-    window.onscroll = function(){
-        var scrollTop = getScrollTop();
-        
-        if(scrollTop > 50) {
-            bkTop[0].style.display = 'block';
-        }else{
-            bkTop[0].style.display = 'none';
-        }
-    };
-    
-    bkTop[0].onclick = function(ev){
-        stopBubble(ev);
+  // 监听滑条移动
+  window.onscroll = function() {
+    var scrollTop = getScrollTop();
 
-        var scrollTop = getScrollTop();
+    if (scrollTop > 50) {
+      bkTop[0].style.display = 'block';
+    } else {
+      bkTop[0].style.display = 'none';
+    }
+  };
 
-        //创建定时器返回顶部
-        valId = setInterval(function() {
-            scrollTop -= 150;
+  bkTop[0].onclick = function(ev) {
+    stopBubble(ev);
 
-            window.scrollTo(0, scrollTop);
+    var scrollTop = getScrollTop();
 
-            if(scrollTop <= 0) {
-                clearInterval(valId);
-            }
-        },30);
-    };
+    //创建定时器返回顶部
+    valId = setInterval(function() {
+      scrollTop -= 150;
+
+      window.scrollTo(0, scrollTop);
+
+      if (scrollTop <= 0) {
+        clearInterval(valId);
+      }
+    }, 30);
+  };
 }
 
 // hasElement
 
 function hasElement(ele) {
-    return (ele[0]|| ele).nodeType;
+  return (ele[0] || ele).nodeType;
 }
 
 // get scrollTop
 
 function getScrollTop() {
-    return document.documentElement.scrollTop || document.body.scrollTop;
+  return document.documentElement.scrollTop || document.body.scrollTop;
 }
 
 // stopBubble
 
 function stopBubble(ev) {
-    ev = ev || window.event;
-    ev.cancelBubble = true;
+  ev = ev || window.event;
+  ev.cancelBubble = true;
 }
 
 // get element
 
 function $(ele_str) {
-    return document.getElementById(ele_str) || document.getElementsByClassName(ele_str);
+  return (
+    document.getElementById(ele_str) || document.getElementsByClassName(ele_str)
+  );
 }

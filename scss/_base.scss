@@ -1,75 +1,73 @@
 // basic style
 
 $main-padding: 15px 5px;
-$main-bg-color: #6D97AB;
+$main-bg-color: #6d97ab;
 $footer-bg-color: #d5e2ef;
 
 $tmp-bg-color: #eee;
 
 html {
-    height: 100%;
-
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; // from GitHub
+  height: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial,
+    sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; // from GitHub
 }
 
 body {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 
-    min-height: 100%;
-    // border: 1px solid red;
+  min-height: 100%;
+  // border: 1px solid red;
 
-    font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 header {
-    background-color: $tmp-bg-color;
-    padding: $main-padding;
+  background-color: $tmp-bg-color;
+  padding: $main-padding;
 
-    &:after {
-        content: '';
-        clear: both;
-        display: block;
-    }
+  &:after {
+    content: '';
+    clear: both;
+    display: block;
+  }
 }
 
 .soso-main {
-    background-color: $tmp-bg-color;
-    padding: $main-padding;
-    margin-top: 5px;
+  background-color: $tmp-bg-color;
+  padding: $main-padding;
+  margin-top: 5px;
 
-    // height: 100%;
-    // height: 40vh;
-    // border: 1px solid green;
-
-
+  // height: 100%;
+  // height: 40vh;
+  // border: 1px solid green;
 }
 
 footer {
-    @extend .soso-main;
-    background-color: $footer-bg-color;
+  @extend .soso-main;
+  background-color: $footer-bg-color;
 }
 
 p {
-    margin: 0;
-    // color: #212529;
+  margin: 0;
+  // color: #212529;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 ul {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 li {
-    list-style: none;
+  list-style: none;
 }
 
 hr {
-    // border-color: #fff;
-    height: 0;
-    // box-sizing: content-box;
+  // border-color: #fff;
+  height: 0;
+  // box-sizing: content-box;
 }

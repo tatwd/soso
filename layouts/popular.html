@@ -1,194 +1,228 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
     <title>soso demo</title>
-    
-    <link rel="stylesheet" href="../dist/css/soso.css">
-    <script src="../dist/js/base.js"></script>
 
-</head>
-<body>
+    <link rel="stylesheet" href="../dist/css/soso.css" />
+    <script src="../dist/js/base.js"></script>
+  </head>
+  <body>
     <!-- header -->
     <header class="soso-header">
-        <div class="soso-nav ">
-            <div class="nav-container soso-col-8 soso-col-m-12 soso-col-s-12">
-                <div class="soso-logo soso-col-1 soso-col-m-1 soso-col-s-6">
-                    <a href="../demo.html">
-                        <img src="../assets/img/soso-logo.svg" alt="soso-logo">
-                    </a>
-                </div>
-                <div class="menu-mobile soso-col-s-6">
-                    <a href="#">
-                        <img src="../assets/img/soso-menu-mobile.svg" alt="soso-logo">
-                    </a>
-                </div>
-                <div class="menu-normal soso-col-10 soso-col-m-10 soso-col-s-12">
-                    <ul class="menu-x">
-                        <li class="item soso-col-1 soso-col-m-2 soso-col-s-12"><a class="active" href="../demo.html">首页</a></li>
-                        <li class="item soso-col-1 soso-col-m-2 soso-col-s-12"><a href="#">标签</a></li>
-                        <li class="item soso-col-1 soso-col-m-2 soso-col-s-12"><a href="#">热门</a></li>
-                        <li class="item soso-col-1 soso-col-m-2 soso-col-s-12"><a href="#">登录</a></li>                   
-                    </ul>
-                </div>
-                <div class="soso-user soso-col-1 soso-col-m-1">
-                    <a href="#">
-                        <img src="../assets/img/soso-user.svg" alt="soso-user">
-                    </a>
-                </div>
-            </div>
+      <div class="soso-nav ">
+        <div class="nav-container soso-col-8 soso-col-m-12 soso-col-s-12">
+          <div class="soso-logo soso-col-1 soso-col-m-1 soso-col-s-6">
+            <a href="../demo.html">
+              <img src="../assets/img/soso-logo.svg" alt="soso-logo" />
+            </a>
+          </div>
+          <div class="menu-mobile soso-col-s-6">
+            <a href="#">
+              <img src="../assets/img/soso-menu-mobile.svg" alt="soso-logo" />
+            </a>
+          </div>
+          <div class="menu-normal soso-col-10 soso-col-m-10 soso-col-s-12">
+            <ul class="menu-x">
+              <li class="item soso-col-1 soso-col-m-2 soso-col-s-12">
+                <a class="active" href="../demo.html">首页</a>
+              </li>
+              <li class="item soso-col-1 soso-col-m-2 soso-col-s-12">
+                <a href="#">标签</a>
+              </li>
+              <li class="item soso-col-1 soso-col-m-2 soso-col-s-12">
+                <a href="#">热门</a>
+              </li>
+              <li class="item soso-col-1 soso-col-m-2 soso-col-s-12">
+                <a href="#">登录</a>
+              </li>
+            </ul>
+          </div>
+          <div class="soso-user soso-col-1 soso-col-m-1">
+            <a href="#">
+              <img src="../assets/img/soso-user.svg" alt="soso-user" />
+            </a>
+          </div>
         </div>
+      </div>
     </header>
 
     <!-- main -->
     <!-- ie not support <main> -->
     <div class="soso-main">
+      <!-- popular author cards -->
+      <div class="card-container">
+        <div class="title-box">热门作者</div>
 
-        <!-- popular author cards -->
-        <div class="card-container">
-            
-            <div class="title-box">热门作者</div>
-
-            <div class="card-box">
-                <div class="soso-col-4 soso-col-m-6 soso-col-s-12">
-                    <div class="card">
-                        <a href="#" class="author">
-                            <img src="../assets/img/soso-logo.svg" alt="avatar" class="avatar">
-                            <h4 class="name">test</h4>
-                            <p class="description">test description.</p>
-                        </a>
-                        <a href="#" class="follow-btn">
-                            <span>关注</span>
-                        </a>
-                        <hr>
-                        <div class="recent-update">
-                            <a href="#" class="new">1</a>
-                            <a href="#" class="new">2</a>
-                            <a href="#" class="new">3</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="soso-col-4 soso-col-m-6 soso-col-s-12">
-                    <div class="card">
-                        <a href="#" class="author">
-                            <img src="../assets/img/soso-logo.svg" alt="avatar" class="avatar">
-                            <h4 class="name">test</h4>
-                            <p class="description">test description.</p>
-                        </a>
-                        <a href="#" class="follow-btn">
-                            <span>关注</span>
-                        </a>
-                        <hr>
-                        <div class="recent-update">
-                            <a href="#" class="new">1</a>
-                            <a href="#" class="new">2</a>
-                            <a href="#" class="new">3</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="soso-col-4 soso-col-m-6 soso-col-s-12">
-                    <div class="card">
-                        <a href="#" class="author">
-                            <img src="../assets/img/soso-logo.svg" alt="avatar" class="avatar">
-                            <h4 class="name">test</h4>
-                            <p class="description">test description.</p>
-                        </a>
-                        <a href="#" class="follow-btn">
-                            <span>关注</span>
-                        </a>
-                        <hr>
-                        <div class="recent-update">
-                            <a href="#" class="new">1</a>
-                            <a href="#" class="new">2</a>
-                            <a href="#" class="new">3</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="soso-col-4 soso-col-m-6 soso-col-s-12">
-                    <div class="card">
-                        <a href="#" class="author">
-                            <img src="../assets/img/soso-logo.svg" alt="avatar" class="avatar">
-                            <h4 class="name">test</h4>
-                            <p class="description">test description.</p>
-                        </a>
-                        <a href="#" class="follow-btn">
-                            <span>关注</span>
-                        </a>
-                        <hr>
-                        <div class="recent-update">
-                            <a href="#" class="new">1</a>
-                            <a href="#" class="new">2</a>
-                            <a href="#" class="new">3</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="soso-col-4 soso-col-m-6 soso-col-s-12">
-                    <div class="card">
-                        <a href="#" class="author">
-                            <img src="../assets/img/soso-logo.svg" alt="avatar" class="avatar">
-                            <h4 class="name">test</h4>
-                            <p class="description">test description.</p>
-                        </a>
-                        <a href="#" class="follow-btn">
-                            <span>关注</span>
-                        </a>
-                        <hr>
-                        <div class="recent-update">
-                            <a href="#" class="new">1</a>
-                            <a href="#" class="new">2</a>
-                            <a href="#" class="new">3</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="soso-col-4 soso-col-m-6 soso-col-s-12">
-                    <div class="card">
-                        <a href="#" class="author">
-                            <img src="../assets/img/soso-logo.svg" alt="avatar" class="avatar">
-                            <h4 class="name">test</h4>
-                            <p class="description">test description.</p>
-                        </a>
-                        <a href="#" class="follow-btn">
-                            <span>关注</span>
-                        </a>
-                        <hr>
-                        <div class="recent-update">
-                            <a href="#" class="new">1</a>
-                            <a href="#" class="new">2</a>
-                            <a href="#" class="new">3</a>
-                        </div>
-                    </div>
-                </div>
+        <div class="card-box">
+          <div class="soso-col-4 soso-col-m-6 soso-col-s-12">
+            <div class="card">
+              <a href="#" class="author">
+                <img
+                  src="../assets/img/soso-logo.svg"
+                  alt="avatar"
+                  class="avatar"
+                />
+                <h4 class="name">test</h4>
+                <p class="description">test description.</p>
+              </a>
+              <a href="#" class="follow-btn">
+                <span>关注</span>
+              </a>
+              <hr />
+              <div class="recent-update">
+                <a href="#" class="new">1</a>
+                <a href="#" class="new">2</a>
+                <a href="#" class="new">3</a>
+              </div>
             </div>
-
-            <div class="load-more">
-                <a href="#">更多文章</a>
+          </div>
+          <div class="soso-col-4 soso-col-m-6 soso-col-s-12">
+            <div class="card">
+              <a href="#" class="author">
+                <img
+                  src="../assets/img/soso-logo.svg"
+                  alt="avatar"
+                  class="avatar"
+                />
+                <h4 class="name">test</h4>
+                <p class="description">test description.</p>
+              </a>
+              <a href="#" class="follow-btn">
+                <span>关注</span>
+              </a>
+              <hr />
+              <div class="recent-update">
+                <a href="#" class="new">1</a>
+                <a href="#" class="new">2</a>
+                <a href="#" class="new">3</a>
+              </div>
             </div>
+          </div>
+          <div class="soso-col-4 soso-col-m-6 soso-col-s-12">
+            <div class="card">
+              <a href="#" class="author">
+                <img
+                  src="../assets/img/soso-logo.svg"
+                  alt="avatar"
+                  class="avatar"
+                />
+                <h4 class="name">test</h4>
+                <p class="description">test description.</p>
+              </a>
+              <a href="#" class="follow-btn">
+                <span>关注</span>
+              </a>
+              <hr />
+              <div class="recent-update">
+                <a href="#" class="new">1</a>
+                <a href="#" class="new">2</a>
+                <a href="#" class="new">3</a>
+              </div>
+            </div>
+          </div>
+          <div class="soso-col-4 soso-col-m-6 soso-col-s-12">
+            <div class="card">
+              <a href="#" class="author">
+                <img
+                  src="../assets/img/soso-logo.svg"
+                  alt="avatar"
+                  class="avatar"
+                />
+                <h4 class="name">test</h4>
+                <p class="description">test description.</p>
+              </a>
+              <a href="#" class="follow-btn">
+                <span>关注</span>
+              </a>
+              <hr />
+              <div class="recent-update">
+                <a href="#" class="new">1</a>
+                <a href="#" class="new">2</a>
+                <a href="#" class="new">3</a>
+              </div>
+            </div>
+          </div>
+          <div class="soso-col-4 soso-col-m-6 soso-col-s-12">
+            <div class="card">
+              <a href="#" class="author">
+                <img
+                  src="../assets/img/soso-logo.svg"
+                  alt="avatar"
+                  class="avatar"
+                />
+                <h4 class="name">test</h4>
+                <p class="description">test description.</p>
+              </a>
+              <a href="#" class="follow-btn">
+                <span>关注</span>
+              </a>
+              <hr />
+              <div class="recent-update">
+                <a href="#" class="new">1</a>
+                <a href="#" class="new">2</a>
+                <a href="#" class="new">3</a>
+              </div>
+            </div>
+          </div>
+          <div class="soso-col-4 soso-col-m-6 soso-col-s-12">
+            <div class="card">
+              <a href="#" class="author">
+                <img
+                  src="../assets/img/soso-logo.svg"
+                  alt="avatar"
+                  class="avatar"
+                />
+                <h4 class="name">test</h4>
+                <p class="description">test description.</p>
+              </a>
+              <a href="#" class="follow-btn">
+                <span>关注</span>
+              </a>
+              <hr />
+              <div class="recent-update">
+                <a href="#" class="new">1</a>
+                <a href="#" class="new">2</a>
+                <a href="#" class="new">3</a>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <!-- back to top -->
-        <a class="soso-backtop">
-            <i class="icon-backtop"></i>
-        </a>
+        <div class="load-more">
+          <a href="#">更多文章</a>
+        </div>
+      </div>
+
+      <!-- back to top -->
+      <a class="soso-backtop">
+        <i class="icon-backtop"></i>
+      </a>
     </div>
 
     <!-- footer -->
     <footer class="soso-footer">
-        <div class="footer-container soso-col-12 soso-col-m-12 soso-col-s-12">
-            <div class="copyright">Copyright &copy; 2017 by 
-                <a href="#" class="soso-author">_king</a>
-            </div>
-            <div class="links">
-                <a href="https://github.com/tatwd/soso" class="to-github">
-                    <!-- Copy this svg from https://github.com -->
-                    <svg version="1.1" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path></svg>
-                </a>
-                <!-- <a href="" class="to-weibo"></a> -->
-            </div>
+      <div class="footer-container soso-col-12 soso-col-m-12 soso-col-s-12">
+        <div class="copyright">
+          Copyright &copy; 2017 by
+          <a href="#" class="soso-author">_king</a>
         </div>
+        <div class="links">
+          <a href="https://github.com/tatwd/soso" class="to-github">
+            <!-- Copy this svg from https://github.com -->
+            <svg version="1.1" viewBox="0 0 16 16">
+              <path
+                fill-rule="evenodd"
+                d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"
+              ></path>
+            </svg>
+          </a>
+          <!-- <a href="" class="to-weibo"></a> -->
+        </div>
+      </div>
     </footer>
-    
-</body>
+  </body>
 </html>

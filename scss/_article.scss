@@ -5,7 +5,7 @@ $color-234: #234;
 $color-eee: #eee;
 $color-fff: #fff;
 $color-42c: #42c02e;
-$title-fsize: 25px; 
+$title-fsize: 25px;
 $title-fweight: 100;
 $title-mbottom: 15px;
 $full-text-height: auto;
@@ -18,195 +18,198 @@ $icon-wh: 12px;
 $icon-bsize: 2px;
 
 .article-container {
-    @extend .list-container;
+  @extend .list-container;
 
-    // padding: $padding-size;
-    // background-color: $color-234;
+  // padding: $padding-size;
+  // background-color: $color-234;
 }
 
 .article-container .content {
+  padding: $padding-size;
+  background-color: $color-fff;
+
+  .title {
+    background-color: $color-eee;
+    font-size: $title-fsize;
+    font-weight: $title-fweight;
+    margin-bottom: $title-mbottom;
     padding: $padding-size;
-    background-color: $color-fff;
+  }
 
-    .title {
-        background-color: $color-eee;
-        font-size: $title-fsize;
-        font-weight: $title-fweight;
-        margin-bottom: $title-mbottom;
-        padding: $padding-size;
-    }
-    
-    .author {
-        // background-color: $color-eee;
-        // margin-bottom: $title-mbottom;
-        // padding: $padding-size;
-        
-        background-color: $color-eee;               
-        margin-bottom: $title-mbottom;
-        padding: $padding-size;
-        color: #757575;
+  .author {
+    // background-color: $color-eee;
+    // margin-bottom: $title-mbottom;
+    // padding: $padding-size;
 
-        .avatar, .name, .time, .tag{
-            display: inline-block;
-            vertical-align: middle;
-        }
+    background-color: $color-eee;
+    margin-bottom: $title-mbottom;
+    padding: $padding-size;
+    color: #757575;
 
-        .avatar {
-            background-color: $main-color;
-            font-size: 0;
-            border-radius: 50%;
-            border: 1px solid #ddd;
-            
-            height: $avatar-size;
-            width: $avatar-size;
-            
-            img {
-                width: $avatar-size - 2px;
-                border-radius: inherit;
-            }
-        }
-
-        .name {
-            color: inherit;
-
-            &:hover {
-                color: $main-color;
-                text-decoration: underline;
-            }
-        }
-
-        .time {
-            font-size: 14px;
-        }
-
-        .tag {
-            font-size: 11px;
-            padding: 1px 6px;
-            border: 1px solid $main-color;
-            border-radius: 3px;
-            color: $main-color;
-        }
+    .avatar,
+    .name,
+    .time,
+    .tag {
+      display: inline-block;
+      vertical-align: middle;
     }
 
-    .full-text {
-        height: $full-text-height;
-        padding: $padding-size;
-        background-color: $color-eee;
-        color: $text-color;
-        font-size: $text-fsize;
-        word-break: $word-break;
+    .avatar {
+      background-color: $main-color;
+      font-size: 0;
+      border-radius: 50%;
+      border: 1px solid #ddd;
 
-        p {
-            line-height: $line-height;
-            margin-bottom: $line-height;
-        }
+      height: $avatar-size;
+      width: $avatar-size;
 
-        .illus {
-            height: auto;
-            max-width: 100%;
-            margin: 0 auto;
-            display: block;
-            border: 1px solid #888;
-            border-radius: 5px;
-            padding: $padding-size - 10px;
-            background-color: $color-fff;
-            margin-bottom: 15px;
-        }
+      img {
+        width: $avatar-size - 2px;
+        border-radius: inherit;
+      }
     }
+
+    .name {
+      color: inherit;
+
+      &:hover {
+        color: $main-color;
+        text-decoration: underline;
+      }
+    }
+
+    .time {
+      font-size: 14px;
+    }
+
+    .tag {
+      font-size: 11px;
+      padding: 1px 6px;
+      border: 1px solid $main-color;
+      border-radius: 3px;
+      color: $main-color;
+    }
+  }
+
+  .full-text {
+    height: $full-text-height;
+    padding: $padding-size;
+    background-color: $color-eee;
+    color: $text-color;
+    font-size: $text-fsize;
+    word-break: $word-break;
+
+    p {
+      line-height: $line-height;
+      margin-bottom: $line-height;
+    }
+
+    .illus {
+      height: auto;
+      max-width: 100%;
+      margin: 0 auto;
+      display: block;
+      border: 1px solid #888;
+      border-radius: 5px;
+      padding: $padding-size - 10px;
+      background-color: $color-fff;
+      margin-bottom: 15px;
+    }
+  }
 }
 
 .article-container .follow {
-    background-color: $color-fff;
-    padding: $padding-size;
-    // border: 1px solid #888;
-    text-align: center;
+  background-color: $color-fff;
+  padding: $padding-size;
+  // border: 1px solid #888;
+  text-align: center;
 
-    .follow-btn {
-        background-color: $color-42c;
-        display: inline-block;
-        padding: 10px ($padding-size + 15px);
-        color: $color-fff;
-        border-radius: 18px;
-        font-size: 16px;
+  .follow-btn {
+    background-color: $color-42c;
+    display: inline-block;
+    padding: 10px ($padding-size + 15px);
+    color: $color-fff;
+    border-radius: 18px;
+    font-size: 16px;
 
-        .icon-follow {
-            display: inherit;
-            // width: 25px;
-            // height: 25px;
-            background-color: $color-fff;
-        }
+    .icon-follow {
+      display: inherit;
+      // width: 25px;
+      // height: 25px;
+      background-color: $color-fff;
     }
+  }
 }
 
 .article-container .article-nav {
-    background-color: $color-fff;
-    padding: $padding-size;
+  background-color: $color-fff;
+  padding: $padding-size;
 
-    &:after {
-        content: '';
-        clear: both;
-        display: block;
+  &:after {
+    content: '';
+    clear: both;
+    display: block;
+  }
+
+  div {
+    background-color: $color-eee;
+    display: inline-block;
+    padding: $article-nav-padding;
+
+    a {
+      display: inline-block;
+      vertical-align: middle;
     }
 
-    div {
-        background-color: $color-eee;
-        display: inline-block;
-        padding: $article-nav-padding;
+    .icon {
+      padding: 5px;
+      font-size: 0;
+    }
+  }
 
-        a {
-            display: inline-block;
-            vertical-align: middle;
-        }
+  .prev {
+    float: left;
 
-        .icon {
-            padding: 5px;
-            font-size: 0;
-        }
+    .prev-text {
+      &:hover {
+        text-decoration: underline;
+      }
     }
 
-    .prev {
-        float: left;
+    .icon {
+      .icon-prev {
+        display: inherit;
+        width: $icon-wh;
+        height: $icon-wh;
+        border-top: $icon-bsize solid $color-234;
+        border-left: $icon-bsize solid $color-234;
+        transform: rotate(-45deg);
+      }
+    }
+  }
 
-        .prev-text {
-            &:hover {
-                text-decoration: underline;
-            }
-        }
+  .next {
+    float: right;
 
-        .icon {
-            .icon-prev {
-                display: inherit;
-                width: $icon-wh;
-                height: $icon-wh;
-                border-top: $icon-bsize solid $color-234;
-                border-left: $icon-bsize solid $color-234;
-                transform: rotate(-45deg);
-            }
-        }
+    .next-text {
+      &:hover {
+        text-decoration: underline;
+      }
     }
 
-    .next {
-        float: right;
-
-        .next-text {
-            &:hover {
-                text-decoration: underline;
-            }
-        }
-
-        .icon {
-            .icon-next {
-                display: inherit;
-                width: $icon-wh;
-                height: $icon-wh;
-                border-top: $icon-bsize solid $color-234;
-                border-right: $icon-bsize solid $color-234;
-                transform: rotate(45deg);
-            }
-        }
+    .icon {
+      .icon-next {
+        display: inherit;
+        width: $icon-wh;
+        height: $icon-wh;
+        border-top: $icon-bsize solid $color-234;
+        border-right: $icon-bsize solid $color-234;
+        transform: rotate(45deg);
+      }
     }
+  }
 }
 
 .soso-comment {
-    padding: $padding-size;
+  padding: $padding-size;
 }
